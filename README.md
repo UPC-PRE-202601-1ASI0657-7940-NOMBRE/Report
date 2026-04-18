@@ -68,8 +68,7 @@
       - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
       - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
   - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
-
-  ### [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
+### [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
 - [2.1. Competidores](#21-competidores)
   - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
   - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
@@ -82,8 +81,7 @@
   - [2.3.2. User Task Matrix](#232-user-task-matrix)
   - [2.3.3. Empathy Mapping](#233-empathy-mapping)
   - [2.3.4. As-is Scenario Mapping](#234-as-is-scenario-mapping)
-  
-  ### [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+### [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
 - [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
 - [3.2. User Stories](#32-user-stories)
 - [3.3. Impact Mapping](#33-impact-mapping)
