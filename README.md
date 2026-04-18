@@ -39,12 +39,15 @@
     </table>
     </div>
 </body>
+<br>
 
 <p align="center">
 <br><strong>2026-10</strong></p>
 <br>
 
 <br>
+<br>
+
 
 # Contenido
 
@@ -113,7 +116,7 @@ Consolidarse como la principal solución digital en el Perú para la gestión de
 
 |                       Photo                        |                      Description                      |
 | :------------------------------------------------: | :---------------------------------------------------: |
-| <img width="404" height="521" alt="foto" src="https://github.com/user-attachments/assets/9dde8619-ff29-4250-850a-9daeb7186c16" />| **Carranza Tesén, Joaquín** <br> Hola, soy Joaquín Carranza. Tengo 25 años y actualmente curso el séptimo ciclo de la carrera de Ingeniería de Software. Me gusta la tecnología y la forma en que ayuda a las personas a resolver problemas de manera más rápida y eficiente. Me interesa especialmente el manejo de datos y la ciberseguridad. Siento que puedo aportar a mi equipo ideas desde otra perspectiva, ya que siempre me cuestiono cómo se podría mejorar el producto o hacia qué objetivo estamos apuntando. |
+| <img width="404" height="140" alt="foto" src="https://github.com/user-attachments/assets/9dde8619-ff29-4250-850a-9daeb7186c16" />| **Carranza Tesén, Joaquín** <br> Hola, soy Joaquín Carranza. Tengo 25 años y actualmente curso el séptimo ciclo de la carrera de Ingeniería de Software. Me gusta la tecnología y la forma en que ayuda a las personas a resolver problemas de manera más rápida y eficiente. Me interesa especialmente el manejo de datos y la ciberseguridad. Siento que puedo aportar a mi equipo ideas desde otra perspectiva, ya que siempre me cuestiono cómo se podría mejorar el producto o hacia qué objetivo estamos apuntando. |
 | [![david.jpg](https://i.postimg.cc/zX8Bw1SK/1881dbb4-5d7f-4e6a-97e4-0c43780b41a0.jpg)](https://postimg.cc/G9gdrVfm) | **Rengifo Lozano, David** <br>  Soy David Rengifo Lozano, tengo 21 años y estoy cursando la carreta de ingenieria de software. Soy apasionado por la tecnologia, la ciencia y los negocios, me gusta crear valor percibible.|
 | [![pierovelarde.jpg](https://i.postimg.cc/pdj5nykJ/pierovelarde.jpg)](https://postimg.cc/Y4pC5r5v) | **Velarde Luyo, Piero Alberto** <br> Soy Piero, estudio la carrera de ingeniería de software en la Universidad Peruana de Ciencias Aplicadas. Escogí esta carrera por mi facilidad en el uso de las computadoras. Asímismo, por mi interés en el funcionamiento de las anteriores mencionadas y todo respecto a la programación y las tecnologías emergentes. |
 
