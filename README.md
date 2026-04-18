@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <td>Carranza Tesén, Joaquín</td>
-            <td>U202218514</td>
+            <td>U20191B935</td>
         </tr>
         <tr>
             <td>Rengifo Lozano, David</td>
