@@ -82,9 +82,15 @@
   - [2.3.2. User Task Matrix](#232-user-task-matrix)
   - [2.3.3. Empathy Mapping](#233-empathy-mapping)
   - [2.3.4. As-is Scenario Mapping](#234-as-is-scenario-mapping)
+  
+  ### [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+- [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
+- [3.2. User Stories](#32-user-stories)
+- [3.3. Impact Mapping](#33-impact-mapping)
+- [3.4. Product Backlog](#34-product-backlog)
 
 
-
+---
 
 
 # Capítulo I: Introducción
