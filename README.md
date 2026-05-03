@@ -40,7 +40,9 @@
     </div>
 </body>
 <br>
-
+<br>
+<br>
+<br>
 <p align="center">
 <br><strong>2026-10</strong></p>
 <br>
@@ -707,3 +709,26 @@ Este mapeo “To-Be” presenta el escenario ideal posterior a la implementació
 | 17 | US002    | Ver sección "Características clave"       | Como visitante, quiero revisar una lista de características principales de Bib Flip para evaluar si cubre mis necesidades como usuario o administrador.      | 2            |
 | 18 | US003    | Ver la galería virtual                    | Como visitante, quiero ver una galería virtual en la landing para visualizar cómo luce Bib Flip, su interfaz y los sensores en acción.                       | 2            |
 
+# Capítulo IV: Product Architecture Design
+## 4.1. Design Concepts, ViewPoints & ER Diagrams
+### 4.1.1. Principles Statements
+### 4.1.2. Approaches Statements Architectural Styles & Patterns
+### 4.1.3. Context Diagram
+### 4.1.4. Approach driven ViewPoints Diagrams
+### 4.1.5. Relational/Non Relational Database Diagram
+### 4.1.6. Design Patterns
+### 4.1.7. Tactics
+## 4.2. Architectural Drivers
+### 4.2.1. Design Purpose
+### 4.2.2. Primary Functionality (Primary User Stories)
+### 4.2.3. Quality Attribute Scenarios
+### 4.2.4. Constraints
+### 4.2.5. Architectural Concerns
+## 4.3. ADD Iterations
+### 4.3.1. Iteration 1: <>
+#### 4.3.1.1. Architectural Design Backlog 1
+#### 4.3.1.2 Establish Iteration Goal by Selecting Drivers
+#### 4.3.1.3 Choose One or More Elements of the System to Refine
+#### 4.3.1.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+#### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+#### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions 
