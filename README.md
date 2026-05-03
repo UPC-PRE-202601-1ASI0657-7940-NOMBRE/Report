@@ -711,19 +711,251 @@ Este mapeo “To-Be” presenta el escenario ideal posterior a la implementació
 
 # Capítulo IV: Product Architecture Design
 ## 4.1. Design Concepts, ViewPoints & ER Diagrams
+En este capítulo se presenta el diseño de la arquitectura del producto Bibflip aplicando la metodología ADD (Attribute Driven Design). Este método sistemático permite diseñar la arquitectura basándose en los atributos de calidad requeridos, asegurando que el sistema cumpla con los requisitos funcionales y posea cualidades de seguridad, usabilidad y mantenibilidad.
 ### 4.1.1. Principles Statements
+Se definen los principios clave para Bibflip, los cuales actúan como pautas generales para alcanzar los objetivos de negocio a largo plazo y asegurar una solución tecnológica robusta y escalable.
+
+- **Precisión en Tiempo Real mediante IoT:** El sistema priorizará los datos provenientes de los sensores físicos de peso para garantizar que la disponibilidad de los cubículos refleje la realidad instantánea, eliminando la incertidumbre del estudiante.
+- **Arquitectura de Microservicios Desacoplada:** Se adoptará un enfoque basado en contextos delimitados (IAM, Booking, Cubicle, etc.), permitiendo que cada componente escale, se despliegue y se mantenga de forma independiente, lo que facilita la evolución continua del producto.
+- **Eficiencia en el Procesamiento (Edge y Cloud):** Utilizaremos una separación de responsabilidades entre una Edge API para el análisis local de sensores y una Cloud API para la lógica de negocio central, optimizando los tiempos de respuesta y reduciendo la carga en la red.
+- **Seguridad Integral y Gestión de Identidad (IAM):** La autenticación y autorización basada en roles (estudiante, administrador, superadmin) será un pilar fundamental para proteger la privacidad de los datos académicos y asegurar la integridad del proceso de reserva.
+- **Infraestructura Cloud-Native con Azure:** La solución se apoyará en servicios de Microsoft Azure (IoT Hub, App Service, Azure MySQL) para garantizar alta disponibilidad, resiliencia y una gestión simplificada de los dispositivos IoT en múltiples sedes.
+- **Usabilidad y Enfoque en el Estudiante:** El diseño arquitectónico debe orientarse a minimizar la fricción en el proceso de reserva y reducir drásticamente el tiempo de búsqueda de espacios de estudio, cumpliendo con la promesa de valor de la startup.
+- **Consistencia Tecnológica y Mantenibilidad:** Se seguirán estándares definidos para cada capa:
+  - **Backend:** Java Spring Boot para la nube y Python Flask para el Edge.
+  - **Frontend:** Vue.js para la web y Flutter para la aplicación móvil.
+  - **Persistencia:** MySQL en la nube para datos globales y SQLite en el Edge para almacenamiento local.
 ### 4.1.2. Approaches Statements Architectural Styles & Patterns
+**Enfoques de Desarrollo y Diseño:**
+
+- **Domain-Driven Design (DDD):** Adoptamos el enfoque DDD para gestionar la complejidad intrínseca del sistema de reservas y la integración IoT. Esto nos ha permitido identificar contextos delimitados clave (IAM, Booking, Cubicle, Branching e IoT Monitoring), asegurando que cada módulo represente fielmente un área lógica del negocio bibliotecario.
+- **Attribute-Driven Design (ADD):** El diseño de la arquitectura de Bibflip se guía sistemáticamente por la metodología ADD, lo que garantiza que las decisiones técnicas se tomen para satisfacer atributos de calidad críticos como la precisión de datos en tiempo real y la escalabilidad.
+
+**Estilos y Patrones Arquitectónicos:**
+
+- **Arquitectura de Microservicios:** Se ha optado por un estilo de microservicios donde las funcionalidades se organizan en servicios independientes y desacoplados. Cada contexto delimitado de DDD se implementará como un servicio que puede escalarse y mantenerse de forma autónoma.
+- **API Gateway:** Actuará como el punto de entrada unificado para la aplicación web y móvil. Este componente se encarga de enrutar las solicitudes de los estudiantes y administradores hacia los microservicios correspondientes, gestionando también la autenticación.
+- **Arquitectura Edge-Cloud (IoT):** Bibflip utiliza un enfoque híbrido especializado para IoT. Una Edge API (desarrollada en Python Flask) se encarga del procesamiento local y análisis de los datos de los sensores de peso, mientras que una Cloud API (Java Spring Boot) centraliza la lógica de negocio y la persistencia global en Azure.
+- **Layered Architecture (Arquitectura en Capas):** Internamente, cada microservicio sigue un patrón de capas (Interface, Application, Domain, Infrastructure) para promover la separación de preocupaciones y facilitar la mantenibilidad del código.
+- **Patrón CQRS (Command Query Responsibility Segregation):** Aplicamos este patrón en la capa de aplicación para separar las operaciones de escritura (comandos) de las de lectura (consultas). Esto es vital para que la consulta de disponibilidad de cubículos en tiempo real sea extremadamente rápida sin interferir con los procesos de creación de reservas.
 ### 4.1.3. Context Diagram
+Este diagrama de contexto ilustra cómo el sistema Bibflip encaja en su entorno, identificando a los actores que interactúan con la plataforma y los sistemas de software externos que complementan su funcionalidad.
+
+**Sistema Central:**
+
+- **Bibflip (Software System):** Es el núcleo de la solución, encargado de la reserva y gestión de cubículos de estudio, integrando datos de sensores para ofrecer información precisa en tiempo real.
+
+**Actores (Personas):**
+
+- **Estudiantes:** Son los usuarios principales que acceden a la aplicación para verificar la disponibilidad de espacios individuales o grupales y realizar sus reservas de estudio.
+- **Administrador de Cubículos (Personal Bibliotecario):** Utiliza el sistema para gestionar la asignación de espacios, supervisar las reservas activas y asegurar que se cumplan las normativas de ocupación mínima (como el requisito de al menos 4 estudiantes para cubículos grupales).
+- **Super Administrador (Equipo de Desarrollo):** Responsable del mantenimiento técnico, la configuración global de la plataforma y la actualización continua del sistema.
+
+**Sistemas Externos (Software Systems):**
+
+- **Red de Sensores IoT:** Sensores físicos instalados en cada cubículo que detectan automáticamente el peso y transmiten el estado de ocupación real hacia el sistema.
+- **Twilio:** Servicio externo de mensajería utilizado por la plataforma para enviar notificaciones push, confirmaciones de reserva y recordatorios automáticos a los usuarios.
+
+<img src="https://i.ibb.co/sJvQ95kz/Contexto.png" alt="System Context en C4" border="0">
+
 ### 4.1.4. Approach driven ViewPoints Diagrams
+En esta sección se presentan las vistas arquitectónicas detalladas del sistema Bibflip utilizando el modelo C4 y notación UML para proporcionar una comprensión profunda de la estructura y el comportamiento de la solución.
+
+**Diagrama de Contenedores (C4 Level 2)**
+
+Este diagrama representa la forma en que el sistema se descompone en aplicaciones y servicios independientes que se comunican entre sí.
+
+  - **Aplicaciones Frontend:** Los estudiantes y administradores interactúan con el sistema mediante una Web App desarrollada en Vue.js y una Mobile App en Flutter.
+  - **API Gateway (Spring Boot):** Actúa como el punto de entrada unificado que redirige las solicitudes de los clientes hacia los servicios internos correspondientes, gestionando la seguridad y el enrutamiento.
+  - **Cloud API (Java Spring Boot):** Concentra la lógica de negocio central, incluyendo la gestión de reservas, validación de reglas de ocupación mínima y persistencia global en una base de datos Azure MySQL.
+  - **Edge API (Python Flask):** Un contenedor especializado que reside cerca de los dispositivos físicos para procesar y analizar los datos de los sensores de peso antes de enviarlos a la nube, utilizando una base de datos local SQLite para resiliencia.
+  - **IoT App (Azure IoT):** Gestiona la comunicación directa con la red de sensores instalados en los cubículos físicos.
+
+<img src="https://i.ibb.co/XfP0RfQ6/container.png" alt="Container en C4" border="0">
+
+**Diagramas de Componentes (C4 Level 3)**
+
+Se detallan los componentes internos de los microservicios clave definidos mediante DDD:
+
+  - **IAM Management Component Diagram:** Describe los componentes encargados de la autenticación, gestión de roles (estudiante, administrador, superadmin) y generación de tokens JWT.
+
+  <img src="https://i.ibb.co/TMsPNKjt/iam.png" alt="IAM BC Component Diagram" border="0">
+
+  - **Booking Management Component Diagram:** Detalla la lógica para la creación de reservas, gestión de slots de tiempo y validación de disponibilidad.
+
+  <img src="https://i.ibb.co/qYs1Jsgy/booking.png" alt="Booking BC Component Diagram" border="0">
+
+  - **Cubicle Management Component Diagram:** Gestiona el inventario de espacios físicos y traduce los datos de los sensores en estados de ocupación comprensibles para el negocio.
+
+  <img src="https://i.ibb.co/35bgDmwJ/cubicule.png" alt="Cubicle Management BC Component Diagram" border="0">
+
+  - **Branching Management Component Diagram:** Este diagrama detalla la estructura interna del microservicio encargado de la administración de las sedes o bibliotecas. 
+
+  <img src="https://i.ibb.co/Xrc92kfY/branching.png" alt="Branching BC Component Diagram" border="0">
+
+
+
+
+**Diagrama de Actividades (UML)**
+
+Este diagrama ilustra el flujo operativo de Bibflip desde la perspectiva del estudiante:
+
+  - El estudiante consulta la disponibilidad en tiempo real mediante el mapa interactivo.
+  - Selecciona un cubículo y define el horario de reserva.
+  - El sistema valida la reserva y actualiza el estado del cubículo automáticamente mediante la integración IoT.
+  - Se envía una notificación de confirmación a través de Twilio.
+
+**Diagrama de Estados (UML)**
+
+Define el ciclo de vida de una reserva en Bibflip, el cual puede transitar entre los estados: Pendiente, Confirmada, Cancelada, En Curso y Completada. Asimismo, define los estados de los cubículos físicos: Disponible, Ocupado, Reservado y En Mantenimiento.
+
+**Diagrama de Clases (UML)**
+Presenta la estructura estática del dominio, destacando las entidades principales y sus relaciones:
+
+- **User y Role:** Para la gestión de identidad.
+<img src="https://i.postimg.cc/0N4x32Xx/Captura-de-pantalla-2025-09-18-181543.png" alt="IAM BC Domain Layer Class Diagram" border="0">
+
+- **Headquarter:** Representa las sedes con sus horarios y ubicaciones.
+<img src="https://i.postimg.cc/cH8ZNyP3/Captura-de-pantalla-2025-09-18-181621.png" alt="Branching BC Domain Layer Class Diagram" border="0">
+
+- **Cubicle y Seat:** Modelan los espacios físicos y sus asientos individuales monitoreados por sensores.
+
+<img src="https://i.ibb.co/JwN8RhhW/cubicule-clase.jpg" alt="Cubicle Management BC Domain Layer Class Diagram" border="0">
+
+- **Booking y TimeSlot:** Gestionan la ocupación temporal de los espacios.
+
+<img src="https://i.postimg.cc/VvQwfZcV/Captura-de-pantalla-2025-09-18-181709.png" alt="Booking BC Domain Layer Class Diagram"/><br>
+
 ### 4.1.5. Relational/Non Relational Database Diagram
+
+<img src="https://i.postimg.cc/FHJ5w0MF/Diagrama-Base-de-datos-Bibflip.png" alt="Database Diagram"/><br>
+
 ### 4.1.6. Design Patterns
+
+A continuación, se presentan los patrones de diseño que se emplearán en el desarrollo de Bibflip para asegurar una implementación coherente con el estilo de microservicios y la metodología DDD:
+
+  - **CQRS (Command Query Responsibility Segregation):** Este patrón es fundamental en la arquitectura de Bibflip para separar las operaciones de escritura (comandos como crear una reserva) de las de lectura (consultas como ver disponibilidad de cubículos). Al usar modelos diferentes para cada sección, optimizamos el rendimiento de las consultas en tiempo real sin comprometer la integridad de las transacciones de reserva.
+  - **DTO (Data Transfer Object):** Utilizaremos objetos planos (DTOs) para el intercambio de datos entre el backend (Spring Boot) y las interfaces de usuario (Vue.js/Flutter). Esto nos permite desacoplar la capa de presentación del modelo de dominio, evitando exponer directamente entidades sensibles de la base de datos y mejorando la seguridad de la información.
+  - **Assembler / Mapper:** Implementaremos clases especializadas (como UserResourceFromEntityAssembler o BookingResourceFromEntityAssembler) encargadas de transformar las entidades del dominio en recursos (DTOs) y viceversa. Esto asegura que la lógica de transformación esté centralizada y no contamine los controladores o servicios.
+  - **Facade (Context Facade / ACL):** Para gestionar la comunicación entre microservicios, emplearemos fachadas de contexto como CubicleManagementContextFacade y HeadquarterContextFacade. Estas actúan como una capa de anticorrupción (ACL), simplificando la interacción entre contextos delimitados (ej. cuando el microservicio de Reservas necesita consultar datos de una Sede o Sede) sin crear un acoplamiento rígido.
+  - **Dependency Injection (Inyección de Dependencias):** Utilizaremos este patrón nativo de Spring Boot para gestionar las dependencias entre controladores, servicios y repositorios. Esto facilita la creación de pruebas unitarias y promueve un código más flexible y fácil de mantener.
+  - **Repository:** Aplicaremos este patrón mediante Spring Data JPA para abstraer la lógica de persistencia en la base de datos Azure MySQL. Los repositorios permitirán a la capa de aplicación interactuar con los datos como si fueran colecciones de objetos en memoria, independientemente del motor de base de datos subyacente.
+  - **Builder:** Este patrón será de gran utilidad para la creación paso a paso de objetos complejos del dominio, como Booking o Headquarter, que poseen múltiples campos y validaciones obligatorias antes de ser instanciados.
+
 ### 4.1.7. Tactics
+
+En esta sección se describen las tácticas arquitectónicas empleadas para satisfacer los atributos de calidad de Bibflip, asegurando que el sistema sea robusto, seguro y eficiente.
+
+**Disponibilidad (Availability)**
+
+  - **Redundancia y Tolerancia a Fallos:** Se utiliza una infraestructura Cloud-Native en Azure con replicación activa para la base de datos Azure MySQL, asegurando que el sistema siga operativo ante fallos en una instancia.
+  - **Resiliencia en el Borde (Edge Resilience):** La implementación de una Edge API con base de datos local SQLite permite que las lecturas de los sensores IoT continúen procesándose y almacenándose localmente incluso si se pierde la conexión temporal con la nube [Turno 5, Turno 7].
+  - **Detección de Fallos:** Implementación de "heartbeats" en el firmware de los dispositivos IoT para monitorear constantemente el estado de los sensores y emitir alertas automáticas al panel del administrador ante cualquier desconexión.
+
+**Seguridad (Security)**
+
+  - **Autenticación y Autorización Robusta:** Uso del módulo IAM (Identity & Access Management) para centralizar la gestión de identidades mediante tokens JWT, asegurando que solo usuarios autenticados accedan a las funciones de reserva.
+  - **Control de Acceso Basado en Roles (RBAC):** Se aplican permisos diferenciados para estudiantes, administradores de cubículos y superadministradores, limitando el acceso a módulos críticos según el perfil del usuario.
+  - **Protección de Datos Sensibles:** Cifrado de contraseñas de usuarios en la base de datos y uso de protocolos seguros (HTTPS/TLS) para todas las comunicaciones entre las aplicaciones cliente, la API Gateway y los microservicios.
+
+**Rendimiento (Performance)**
+
+  - **Baja Latencia en Tiempo Real:** Optimización del flujo de datos IoT para que el estado de ocupación de los cubículos se actualice en las interfaces de usuario en un tiempo menor a 5 segundos tras la detección de cambio de peso.
+  - **Separación de Responsabilidades (CQRS):** El uso del patrón CQRS permite que las consultas de disponibilidad (lecturas masivas) se realicen de forma independiente a las transacciones de reserva (escrituras), evitando cuellos de botella en horas pico de matrícula o exámenes [Turno 2, Turno 8].
+  - **Comunicación Eficiente:** Uso de formatos ligeros como JSON para el intercambio de datos entre el backend y las aplicaciones móviles/web, minimizando el consumo de ancho de banda.
+
+**Usabilidad (Usability)**
+
+  - **Visualización Intuitiva:** Implementación de un mapa interactivo en tiempo real que permite al estudiante ubicar geográficamente los cubículos disponibles, reduciendo drásticamente el tiempo de búsqueda física en la biblioteca.
+  - **Reducción de Fricción:** Diseño de un proceso de reserva simplificado con confirmaciones automáticas y recordatorios a través de Twilio, mejorando la experiencia del usuario y la planificación de sus sesiones de estudio.
+  - **Accesibilidad Multiplataforma:** Desarrollo de interfaces consistentes tanto en la Web App (Vue.js) como en la Mobile App (Flutter), permitiendo al usuario gestionar sus espacios de estudio desde cualquier dispositivo.
+
 ## 4.2. Architectural Drivers
 ### 4.2.1. Design Purpose
+
+El propósito del proceso de diseño de la arquitectura de Bibflip es establecer un ecosistema tecnológico robusto, escalable y eficiente que resuelva la ineficacia en la gestión de espacios de estudio en las bibliotecas universitarias peruanas. El diseño busca integrar armónicamente dispositivos físicos (sensores IoT) con una plataforma digital (Web y Móvil) para eliminar la incertidumbre del estudiante y optimizar la labor administrativa del personal bibliotecario.
+
+Alineación de drivers con la arquitectura:
+
+  - Eficiencia Operativa: El diseño se orienta a incrementar en un 30% la eficiencia en la utilización de cubículos y reducir en un 80% el tiempo de búsqueda de espacios para los estudiantes.
+  - Precisión en Tiempo Real: La arquitectura prioriza la captura y procesamiento de datos de sensores de peso para reflejar la disponibilidad real en un tiempo menor a 5 segundos.
+  - Escalabilidad y Mantenibilidad: Se adopta un enfoque de microservicios y DDD para asegurar que cada contexto (IAM, Booking, Cubicle, Branching e IoT) pueda evolucionar independientemente según crezca la demanda institucional.
+
+Coherencia con modelos y vistas arquitectónicas:
+
+  - Hibridación Edge-Cloud: Se define una separación clara entre la Edge API (procesamiento local de sensores) y la Cloud API (lógica de negocio en Azure) para garantizar disponibilidad y resiliencia incluso ante inestabilidad de red.
+  - Seguridad y Control: El diseño arquitectónico implementa un microservicio de IAM centralizado que garantiza que solo usuarios autorizados realicen reservas, protegiendo la integridad de los datos académicos.
+  - Persistencia Especializada: Se utiliza una base de datos relacional (Azure MySQL) para la consistencia de las reservas globales y una base de datos ligera (SQLite) en el borde para la persistencia inmediata de las lecturas de sensores.
+  - Experiencia de Usuario Superior: El diseño de los contenedores frontend (Vue.js y Flutter) se alinea con el driver de Usabilidad, proporcionando un mapa interactivo que facilita la visualización geográfica de las sedes y su aforo actual.
 ### 4.2.2. Primary Functionality (Primary User Stories)
+En este apartado se identifican las funcionalidades de mayor prioridad que definen la estructura de la aplicación y soportan los procesos clave del negocio de gestión bibliotecaria.
+
+**Requerimientos funcionales de mayor prioridad**
+
+| Categoría                         | ID      | Título                                                  |
+|-----------------------------------|---------|---------------------------------------------------------|
+| Gestión de Reservas (Estudiantes) | RF-RE01 | Consulta de disponibilidad en tiempo real (IoT).        |
+|                                   | RF-RE02 | Proceso de reserva de cubículos individuales/grupales.  |
+|                                   | RF-RE03 | Visualización y seguimiento de reserva activa.          |
+| Gestión Administrativa (Personal) | RF-AD01 | Gestión de inventario de cubículos (CRUD).              |
+|                                   | RF-AD02 | Monitoreo y filtrado de reservas de la sede.            |
+| Gestión Global (Superadmin)       | RF-SA01 | Registro y asignación de administradores a sedes.       |
+|                                   | RF-SA02 | Configuración global de sedes y parámetros del sistema. |
+
+
+**Historias de Usuario Primarias**
+
+Estas historias describen los servicios fundamentales que requieren una coordinación entre los microservicios de IAM, Booking, Cubicle y Branching.
+
+| User Story ID | Título                            | Descripción                                                                                                                                              |
+|---------------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| US007         | Ver disponibilidad en tiempo real | Como estudiante, quiero conocer la disponibilidad de cubículos mediante el mapa interactivo para decidir a qué sede acudir sin perder tiempo.            |
+| US008         | Reservar un cubículo              | Como estudiante, quiero reservar un cubículo para asegurar un lugar al llegar al centro de estudio, respetando la capacidad mínima permitida.            |
+| US006         | Visualizar reserva activa         | Como estudiante, quiero visualizar mi reserva activa para confirmar detalles de sede, cubículo y horario antes de mi llegada.                            |
+| US012         | Agregar nuevos cubículos          | Como administrador de sede, quiero agregar cubículos al sistema con su capacidad y ubicación para gestionar mejor la ocupación de mi biblioteca.         |
+| US013         | Visualizar reservas realizadas    | Como administrador, quiero ver la lista de reservas en mi sede (filtradas por usuario o fecha) para planificar eficientemente el servicio bibliotecario. |
+| US017         | Registro de administrador         | Como superadmin, quiero registrar nuevos administradores y asignarles una sede específica para delegar la gestión operativa de los espacios.             |
+| US018         | Acceso total a módulos            | Como superadmin, quiero tener acceso a todas las funcionalidades del sistema para realizar pruebas técnicas y configurar sedes nuevas.                   |
+
+
 ### 4.2.3. Quality Attribute Scenarios
+
+En esta sección se presentan los escenarios de atributos de calidad que actúan como requisitos técnicos específicos para validar la robustez de la arquitectura de Bibflip.
+
+| ID   | Atributo de Calidad | Fuente de Estímulo                           | Estímulo                                                                                 | Entorno                                                   | Artefacto                             | Respuesta                                                                                                 | Medida de Respuesta                                                                                                   |
+|------|---------------------|----------------------------------------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| QA-1 | Disponibilidad      | Red de Sensores IoT                          | Un sensor detecta un cambio de peso en un asiento del cubículo,.                         | Operación normal con tráfico constante de datos.          | Edge API y Cloud API                  | El sistema procesa la lectura y actualiza el estado de ocupación en el mapa interactivo,.                 | El estado de disponibilidad debe actualizarse en la aplicación en menos de 5 segundos,.                               |
+| QA-2 | Seguridad           | Usuario no autenticado                       | Intento de acceder a la gestión de cubículos o realizar una reserva sin un token válido. | Operación normal, el sistema recibe una petición externa. | Microservicio de IAM                  | El sistema bloquea la petición, deniega el acceso y solicita credenciales válidas,.                       | El acceso debe ser denegado y notificado al usuario en menos de 100ms.                                                |
+| QA-3 | Rendimiento         | 1,300 estudiantes (población universitaria). | Aumento masivo de consultas de disponibilidad durante la semana de exámenes finales.     | Carga máxima del sistema (sobrecarga).                    | API Gateway y Azure MySQL             | El sistema prioriza las consultas mediante CQRS, separando las lecturas de las transacciones de reserva,. | El tiempo de respuesta para el 95% de las consultas de disponibilidad debe ser ≤ 2 segundos.                          |
+| QA-4 | Usabilidad          | Estudiante universitario.                    | Deseo de reservar un cubículo específico tras visualizarlo en el mapa.                   | Interacción mediante la Mobile App (Flutter).             | Interfaz de Usuario (Frontend)        | El sistema guía al usuario por un flujo intuitivo de selección y confirmación de reserva,.                | El estudiante debe poder completar la reserva en menos de 3 clics desde la pantalla principal.                        |
+| QA-5 | Modificabilidad     | Equipo de Desarrollo (Superadmin).           | Necesidad de agregar una nueva sede universitaria con reglas de capacidad distintas.     | Entorno de mantenimiento y actualización.                 | Microservicio de Branching Management | El desarrollador agrega el nuevo módulo o configuración sin afectar el funcionamiento de IAM o Reservas,. | Los cambios deben implementarse y desplegarse en el entorno cloud sin generar tiempos de inactividad (Zero Downtime). |
+| QA-6 | Interoperabilidad   | Sistema Externo (Twilio)                     | Necesidad de enviar una notificación de confirmación tras una reserva exitosa.           | Transacción completada en el microservicio de Booking.    | Cloud API                             | El sistema se comunica mediante API REST para enviar los datos de la reserva al proveedor de mensajería.  | La notificación debe ser recibida por el estudiante en menos de 10 segundos tras confirmar la reserva.                |
+
 ### 4.2.4. Constraints
+
+Se identifican los factores tecnológicos y de entorno que imponen restricciones a la arquitectura de Bibflip, limitando las opciones de diseño para garantizar la coherencia con los estándares institucionales y la infraestructura en la nube.
+
+| ID    | Factor                       | Restricción                                                                                                                                                                                                                 |
+|-------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CON-1 | Topología de la red          | La arquitectura debe garantizar baja latencia mediante una red distribuida en Microsoft Azure, con balanceadores de carga para asegurar que las actualizaciones de los sensores IoT lleguen a la aplicación en tiempo real. |
+| CON-2 | Proveedor de Base de Datos   | Es obligatorio el uso de Azure MySQL para la persistencia global de reservas e identidad, y de SQLite en el borde (Edge) para la resiliencia de datos de sensores locales.                                                  |
+| CON-3 | Entorno Web y Lenguajes      | El desarrollo del backend está restringido al uso de Java Spring Boot para los microservicios en la nube y Python Flask para el procesamiento en el Edge. El frontend debe implementarse en Vue.js (Web) y Flutter (Móvil). |
+| CON-4 | Servidores e Infraestructura | El despliegue debe realizarse mandatoriamente en la plataforma Azure, utilizando App Service para alojar las APIs y Azure IoT Hub para la gestión de la comunicación con los dispositivos físicos.                          |
+| CON-5 | Software de Terceros         | El sistema debe integrarse con la API de Twilio para el envío de notificaciones de confirmación de reserva y con Google Maps API para la geolocalización de las sedes universitarias.                                       |
+| CON-6 | Cumplimiento de Normas       | La aplicación debe cumplir con las regulaciones de protección de datos personales y normativas de seguridad informática académica, asegurando la privacidad de la información gestionada por el microservicio de IAM.       |
+
 ### 4.2.5. Architectural Concerns
+
+| ID    | Título                                        | Architectural Concerns                                                                                                                                                                                                                            | Driver Asociado             |
+|-------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
+| CRN-1 | Sincronización de Datos IoT en Tiempo Real    | **Preocupación:** Garantizar que los datos de peso capturados por los sensores se procesen en la Edge API y se reflejen en la Cloud API y la interfaz del usuario en menos de 5 segundos para evitar discrepancias entre el estado real y el digital. | Rendimiento / Precisión     |
+| CRN-2 | Resiliencia ante Fallos de Conectividad       | **Preocupación:** Asegurar que el sistema de monitoreo de cubículos no se detenga si se pierde la conexión con Azure. Se debe garantizar la persistencia local en el borde (Edge SQLite) y la sincronización posterior.                               | Disponibilidad              |
+| CRN-3 | Seguridad y Privacidad de Datos Académicos    | **Preocupación:** Proteger la identidad de los estudiantes y la integridad de las reservas mediante el microservicio IAM, utilizando tokens JWT y cifrado para evitar accesos no autorizados a la gestión de espacios.                                | Seguridad                   |
+| CRN-4 | Escalabilidad ante Picos de Demanda           | **Preocupación:** Soportar el aumento masivo de tráfico durante semanas de exámenes finales (considerando la población de 1.3 millones de estudiantes de pregrado en el país) sin degradar los tiempos de respuesta del sistema de reservas.          | Rendimiento / Escalabilidad |
+| CRN-5 | Interoperabilidad con Servicios Externos      | **Preocupación:** Mantener una integración fluida y desacoplada con Twilio para notificaciones y con la infraestructura física de sensores, asegurando que fallos en terceros no bloqueen la lógica core de la aplicación.                            | Interoperabilidad           |
+| CRN-6 | Mantenibilidad de Microservicios Desacoplados | **Preocupación:** Facilitar la evolución independiente de los contextos (Booking, Cubicle, Branching) y su despliegue continuo en Azure App Service sin generar tiempos de inactividad durante las actualizaciones.                                   | Modificabilidad             |
+
+
 ## 4.3. ADD Iterations
 ### 4.3.1. Iteration 1: <>
 #### 4.3.1.1. Architectural Design Backlog 1
