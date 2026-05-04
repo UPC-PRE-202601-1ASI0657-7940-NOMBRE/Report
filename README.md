@@ -50,6 +50,15 @@
 <br>
 <br>
 
+## Registro de Versiones del Informe
+
+En esta sección se resumen los avances y modificaciones realizadas durante el ciclo de vida de desarrollo del proyecto equivalente a un semestre.
+
+| Versión | Fecha      | Autor                          | Descripción de modificación                                                 |
+| ------- | ---------- | ------------------------------ | --------------------------------------------------------------------------- |
+| Avance 1     | 18/04/2025 | Bibflip | Comenzamos evaluando el problema, definiendo el público objetivo y estableciendo la solución del producto. Posteriormente, procedimos a redactar las historias de usuario y a organizar el product backlog.                                       |
+| Avance 2     | 03/05/2025 | Bibflip | Se elaboró la segunda parte del trabajo, la cual abarca el capítulo 4. En esta sección se definieron los conceptos clave de la arquitectura de software y se detalló, junto con sus diagramas, la solución propuesta.                                       |
+
 
 # Contenido
 
@@ -91,6 +100,17 @@
 - [3.2. User Stories](#32-user-stories)
 - [3.3. Impact Mapping](#33-impact-mapping)
 - [3.4. Product Backlog](#34-product-backlog)
+
+
+---
+
+# Student Outcome
+
+| Criterio específico                                                                                                                     | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Piero Velarde Luyo** <br> **Avance 1:** Analicé el planteamiento del problema y profundicé mis conocimientos informáticos para integrar en la solución los segmentos de usuarios adecuados, basándome en los requerimientos del software. <br> **Avance 2:** La redacción y elaboración del capítulo 4 me permitió actualizar mis conocimientos en arquitectura de software. Gracias a esto, pude estructurar la solución con mayor claridad y tomar decisiones técnicas fundamentadas que impulsan mi desarrollo profesional. | **Avance 1:** Como equipo, revisamos los conceptos clave del proyecto para definir el problema y desarrollar la solución. Al identificar áreas de mejora en la arquitectura de software, actualizamos nuestros conocimientos para aplicar las mejores prácticas. Esto nos permitió diseñar un software más robusto y escalable. <br> **Avance 2:** Investigamos y aplicamos conceptos de arquitectura de software para estructurar nuestra propuesta. Esto nos permitió definir los elementos solicitados e identificar qué otros conocimientos eran necesarios para diseñar una arquitectura sólida.                                 |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.  | **Piero Velarde Luyo** <br> **Avance 1:** Me familiaricé con el perfil de los usuarios y el personal técnico para integrarme por completo al proyecto, impulsando propuestas de organización y reuniones de trabajo. <br> **Avance 2:** Liderar el equipo me hizo notar que el aprendizaje continuo es vital en el desarrollo de software. Por ello, investigué conceptos técnicos clave para respaldar nuestras decisiones arquitectónicas y orientar la solución de manera efectiva.                                          | **Avance 1:** En esta etapa, el equipo colaboró para desarrollar la solución y repasó los conceptos previos para fundamentar nuestras herramientas. Además, investigamos nuevos temas para entender mejor el problema, lo que nos permitió definir los requerimientos y las historias de usuario de forma coherente y precisa. <br> **Avance 2:** Continuaremos investigando y definiendo los conceptos técnicos necesarios para diagramar nuestra arquitectura. Así, garantizaremos la satisfacción de los requerimientos de los interesados y daremos inicio a la primera iteración del diseño arquitectónico guiado por atributos. |
+
 
 
 ---
