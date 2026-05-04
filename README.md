@@ -1,4 +1,3 @@
-<img width="1600" height="872" alt="image" src="https://github.com/user-attachments/assets/5b595110-6130-4608-a7e8-5b0e64039a6c" />
 <p align="center">
     <strong>Universidad Peruana de Ciencias Aplicadas</strong><br>    
     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png"></img><br>
