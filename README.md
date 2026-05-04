@@ -1152,5 +1152,5 @@ Se definen los componentes internos y sus interacciones:
       - `POST /api/v1/bookings`: Creación de reserva con validación de capacidad (mínimo 3-4 estudiantes).
 
 #### 4.3.2.6. Sketch Views (C4 & UML) and Record Design Decisions
-[image.png](https://postimg.cc/FY2Lc4m2](https://postimg.cc/FY2Lc4m2)(https://postimg.cc/FY2Lc4m2)
+[![image.png](https://i.postimg.cc/nLLYyFWc/image.png)](https://postimg.cc/FY2Lc4m2)
 #### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
