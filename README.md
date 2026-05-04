@@ -1153,4 +1153,6 @@ Se definen los componentes internos y sus interacciones:
 
 #### 4.3.2.6. Sketch Views (C4 & UML) and Record Design Decisions
 [![image.png](https://i.postimg.cc/nLLYyFWc/image.png)](https://postimg.cc/FY2Lc4m2)
+
+[![image.png](https://i.postimg.cc/Twt8R3d5/image.png)](https://postimg.cc/Kk3pfFgm)
 #### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
