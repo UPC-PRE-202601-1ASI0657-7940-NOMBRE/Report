@@ -6,7 +6,7 @@
     <strong>1ASI0657 - Fundamentos de Arquitectura de Software</strong><br>
     <br><strong>NRC 7940</strong><br>
     <br><strong>Profesor: Daniel Enrique Mori Yzaguirre</strong><br>
-    <br><strong><b>INFORME DEL TRABAJO FINAL</strong></b><br>
+    <br><strong><b>INFORME DEL AVANCE 2</strong></b><br>
 </p>
 
 <p align="center">
