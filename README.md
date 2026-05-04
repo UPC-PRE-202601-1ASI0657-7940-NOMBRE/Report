@@ -957,10 +957,149 @@ Se identifican los factores tecnológicos y de entorno que imponen restricciones
 
 
 ## 4.3. ADD Iterations
-### 4.3.1. Iteration 1: <>
+### 4.3.1. Iteration 1: <Bibflip Foundation & Security Enhancement>
 #### 4.3.1.1. Architectural Design Backlog 1
+En esta primera iteración, el Architectural Design Backlog se establece como la hoja de ruta para definir los elementos base de Bibflip. Se prioriza la creación de un entorno seguro y una estructura organizativa sólida (sedes), lo cual es requisito indispensable antes de implementar la lógica compleja de reservas e IoT.
+Las tareas arquitectónicas priorizadas para este backlog son:
+
+  1. **Establecimiento de Metas de Diseño:** Definir los objetivos de la iteración basándose en los drivers de Seguridad (IAM), Disponibilidad y Modificabilidad.
+  2. **Refinamiento de Elementos del Sistema:** Seleccionar y detallar los contextos delimitados de IAM Management y Branching Management como los componentes primarios a refinar.
+  3. **Selección de Conceptos de Diseño:** Elegir los patrones y estilos que satisfagan los drivers, tales como la Arquitectura de Microservicios, el uso de un API Gateway y la autenticación mediante JWT.
+  4. **Instanciación de Elementos Arquitectónicos:** Asignar responsabilidades específicas a las entidades de User, Role y Headquarter, asegurando que el modelo de dominio sea consistente.
+  5. **Definición de Interfaces y Fachadas:** Establecer cómo se comunicarán estos módulos con el resto del sistema a través de REST APIs y el patrón Context Facade (ACL).
+  6. **Documentación de Vistas y Decisiones:** Realizar el bosquejo de los diagramas de contenedores (C4 Level 2) y de componentes (C4 Level 3) para los módulos de identidad y sedes.
+  7. **Gestión de Cambios en Kanban Board:** Registrar todas las decisiones arquitectónicamente relevantes para asegurar la trazabilidad en futuras iteraciones.
 #### 4.3.1.2 Establish Iteration Goal by Selecting Drivers
+El objetivo central de esta primera iteración es garantizar una base técnica sólida, segura y escalable para los servicios de identidad (IAM) y la estructura organizativa de las bibliotecas (Branching). Al establecer estos cimientos, aseguramos que el sistema pueda soportar posteriormente la lógica crítica de reservas e integración de sensores IoT sin comprometer la integridad de los datos académicos.
+
+**Identificación de Drivers**
+
+Para esta iteración, se han seleccionado los siguientes drivers que guiarán el diseño de los módulos iniciales:
+
+  - **Seguridad (Security):** Es el driver de mayor prioridad. Se debe asegurar que el acceso a la gestión de cubículos y la información personal de los estudiantes esté protegida mediante autenticación y autorización por roles (estudiante, administrador y superadmin).
+  - **Disponibilidad (Availability):** El sistema debe garantizar que los servicios de gestión de sedes y perfiles de usuario estén accesibles en la nube de Azure, permitiendo que el personal bibliotecario configure los espacios en cualquier momento operativo.
+  - **Modificabilidad (Modificability):** Al adoptar una arquitectura de microservicios, buscamos que los contextos de IAM y Branching puedan evolucionar o ser actualizados de forma independiente sin afectar el desarrollo futuro de los módulos de reservas o monitoreo IoT.
+  - **Interoperabilidad (Interoperability):** Se debe establecer una comunicación estandarizada y eficiente entre el API Gateway y los microservicios iniciales utilizando protocolos REST y formato JSON, facilitando la integración con las aplicaciones web y móviles.
+
+**Enfoque de la Iteración**
+
+Con estos drivers definidos, el diseño se centrará en:
+
+  - **Gestión de Identidad Robusta:** Implementar el microservicio de IAM para manejar el ciclo de vida del usuario, desde el registro de estudiantes (US010) hasta el control total por parte del superadmin (US018).
+  - **Estructura Jerárquica de Sedes:** Diseñar el microservicio de Branching para modelar las bibliotecas universitarias (US014), permitiendo que cada administrador gestione exclusivamente su área de responsabilidad.
+  - **Estabilidad de la Infraestructura Cloud:** Configurar los recursos base en Microsoft Azure (App Services y Azure MySQL) para asegurar que la plataforma sea resiliente desde su despliegue inicial.
 #### 4.3.1.3 Choose One or More Elements of the System to Refine
+
+En esta iteración, se han seleccionado los elementos del sistema que constituyen el "esqueleto" funcional y el perímetro de seguridad de la plataforma. La refinación de estos componentes es crítica para asegurar que el sistema sea confiable antes de integrar la lógica de sensores IoT.
+
+Elementos seleccionados para refinamiento:
+
+  - **Microservicio de IAM (Identity & Access Management):** Se prioriza este elemento para satisfacer el driver de Seguridad. El refinamiento se centrará en la lógica de autenticación y la gestión de roles (estudiante, administrador de sede y superadmin), asegurando que el acceso a los datos académicos y operativos esté protegido desde el inicio.
+  - **Microservicio de Branching Management:** Se selecciona este componente para establecer la estructura organizativa de las bibliotecas universitarias. Refinaremos la gestión de sedes, horarios operativos y geolocalización, lo cual es fundamental para que el resto de los servicios (como Reservas) tengan un contexto físico donde operar.
+  - **API Gateway (Java Spring Boot):** Actuará como el punto de entrada único para el sistema. Se refinará su capacidad para enrutar peticiones de forma eficiente hacia los microservicios de IAM y Branching, gestionando además la validación centralizada de tokens de seguridad para cumplir con el driver de Interoperabilidad.
+  - **Capa de Persistencia Global (Azure MySQL):** Se refinará el diseño de las tablas base para usuarios y sedes. Esto asegura que la base de datos centralizada en la nube de Azure proporcione la Disponibilidad necesaria para los administradores y estudiantes en cualquier momento.
+  - **Interfaces y Fachadas de Contexto (ACL):** Refinaremos la comunicación entre el microservicio de IAM y Branching mediante fachadas (Context Facade), lo que garantiza un bajo acoplamiento y facilita la Modificabilidad futura del sistema cuando se agreguen nuevos subdominios.
+
+La elección de estos elementos permite mitigar el riesgo de vulnerabilidades de acceso y asegura que la configuración de las sedes universitarias sea estable. Al refinar estos componentes primero, creamos un entorno donde la posterior integración de los sensores de peso (en la Iteración 2) se realice sobre una arquitectura ya validada y segura.
+
 #### 4.3.1.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+A continuación, se presentan los conceptos de diseño elegidos para asegurar que los cimientos del sistema cumplan con los atributos de calidad requeridos:
+
+  - **Seguridad (Security):**
+      - **Autenticación y Autorización basada en Roles (RBAC) con JWT:** Se implementará un sistema de control de acceso en el microservicio de IAM donde los usuarios (Estudiantes, Administradores y Superadmins) recibirán un token JWT tras autenticarse. Este token permitirá validar permisos de forma centralizada en el API Gateway antes de redirigir las peticiones a módulos sensibles.
+      - **Cifrado de Credenciales:** Se utilizará el algoritmo BCrypt dentro de la capa de infraestructura del IAM para encriptar las contraseñas antes de su persistencia en la base de datos, garantizando la protección de los datos académicos.
+      - **Comunicación Segura:** Todas las interacciones entre los dispositivos del usuario, el API Gateway y los servicios en la nube se realizarán exclusivamente mediante protocolos cifrados como HTTPS/TLS.
+  - **Disponibilidad (Availability):**
+      - **Infraestructura Cloud-Native (Microsoft Azure):** Se opta por desplegar los microservicios en Azure App Service y utilizar Azure Database for MySQL. Estos servicios gestionados proveen alta disponibilidad intrínseca y escalado automático, asegurando que la gestión de sedes y el login estén siempre operativos para la comunidad universitaria.
+      - **Persistencia Desacoplada:** Siguiendo el principio de microservicios, cada contexto tendrá su propio esquema de datos, lo que evita que un fallo en la base de datos de un módulo afecte la disponibilidad de los demás.
+  - **Modificabilidad (Modificability):**
+      - **Arquitectura de Microservicios basada en DDD:** El sistema se organiza en Contextos Delimitados (IAM, Branching, etc.), permitiendo que cada uno evolucione independientemente. Esto facilita añadir nuevas sedes o cambiar reglas de autenticación sin impactar al resto de la plataforma.
+      - **Capa de Anticorrupción (ACL) y Facade:** Se utilizarán facade como HeadquarterContextFacade para que otros módulos consulten datos de las sedes de forma simplificada, manteniendo un bajo acoplamiento entre servicios.
+  - **Interoperabilidad (Interoperability):**
+      - **API Gateway como Punto de Entrada Único:** Se utilizará un Gateway (desarrollado en Spring Boot) para orquestar los requests de las aplicaciones web y móviles, estandarizando la comunicación mediante APIs RESTful.
+      - **Intercambio de Datos en JSON:** Se adopta el formato JSON para todas las respuestas de la API, asegurando una integración fluida y ligera con el frontend de Vue.js y Flutter.
 #### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
-#### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions 
+1. **Microservicio de IAM (Identity & Access Management)** <br>
+Este módulo es el pilar de la Seguridad y gestiona el ciclo de vida del usuario y sus permisos.
+
+  - **Elementos Arquitectónicos y Responsabilidades:**
+      - Agregado User: Responsable de encapsular la lógica de autenticación, almacenamiento seguro de credenciales (hashing) y la gestión de la relación con los roles asignados.
+      - Entidad Role: Define los privilegios específicos para los roles de Estudiante, Administrador y Superadmin.
+      - UserCommandService: Orquesta los procesos de registro (sign-up) y autenticación (sign-in), coordinando con el servicio de tokens JWT.
+      - IAM Context Facade (ACL): Actúa como la interfaz de control de acceso para que otros microservicios validen si un usuario tiene los permisos necesarios para realizar una acción.
+
+  - **Definición de Interfaces (API REST):**
+      - `POST /api/v1/authentication/sign-up`: Registro de nuevos estudiantes y administradores.
+      - `POST /api/v1/authentication/sign-in`: Validación de credenciales y emisión del token JWT.
+      - `GET /api/v1/users/{userId}`: Consulta de perfil y roles para personalización de la interfaz.
+
+2. **Microservicio de Branching Management** <br>
+Encargado de la estructura organizativa de las sedes, cumpliendo con el driver de Modificabilidad.
+
+  - **Elementos Arquitectónicos y Responsabilidades:**
+      - Agregado Headquarter: Responsable de mantener la integridad de los datos de la sede, incluyendo geolocalización (latitud/longitud) y datos de contacto.
+      - Entidad Schedule: Gestiona los horarios de apertura y cierre de las bibliotecas, así como los intervalos de tiempo permitidos para las reservas.
+      - HeadquarterRepository: Gestiona la persistencia en Azure MySQL, asegurando que no existan sedes duplicadas en la misma ubicación geográfica.
+  - **Definición de Interfaces (API REST e Inter-contexto):**
+      - `GET /api/v1/headquarters`: Lista de todas las sedes para el mapa interactivo del estudiante.
+      - `POST /api/v1/headquarters`: Configuración de nuevas sedes por parte del Superadmin.
+      - HeadquarterContextFacade.existsHeadquarter(id): Interfaz interna para que el microservicio de Reservas valide si una sede es válida antes de procesar un slot.
+
+3. **API Gateway y Capa de Infraestructura**
+
+  - API Gateway (Spring Boot): Responsable de centralizar los requests, realizar la validación del token JWT de forma global y redirigir el tráfico hacia el microservicio correspondiente.
+  - HashingService: Responsable de aplicar el algoritmo BCrypt a las contraseñas antes de que lleguen a la base de datos.
+#### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions
+#### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board) 
+
+### 4.3.2. Iteration 2: <Booking Management & IoT Integration>
+#### 4.3.2.1. Architectural Design Backlog 2
+En esta etapa, el backlog se centra en refinar los procesos críticos que permiten al estudiante asegurar un espacio de estudio y al sistema reflejar la ocupación física real. Las tareas priorizadas son:
+
+  1. **Refinamiento del Subdominio Core:** Detallar la lógica de negocio para la creación de reservas y validación de reglas (como la ocupación mínima).
+  2. **Diseño de la Arquitectura IoT:** Definir el flujo de datos desde los sensores físicos hasta la interfaz de usuario.
+  3. **Optimización del Rendimiento:** Implementar el patrón CQRS para asegurar que las consultas masivas de disponibilidad no afecten la creación de reservas.
+  4.  **Resiliencia en el Borde:** Configurar la interacción entre la Edge API y la Cloud API para mantener la captura de datos ante fallos de red.
+
+#### 4.3.2.2 Establish Iteration Goal by Selecting Drivers
+
+El objetivo de esta iteración es optimizar el rendimiento en tiempo real y la precisión de la disponibilidad, consolidando una arquitectura híbrida que soporte tanto la lógica de negocio compleja como la telemetría de sensores.
+
+**Drivers seleccionados:**
+
+  - **Rendimiento (Performance):** El estado de disponibilidad debe actualizarse en menos de 5 segundos tras la detección de cambio de peso por los sensores.
+  - **Disponibilidad (Availability):** El sistema debe ser capaz de recolectar datos localmente en el borde (Edge) mediante SQLite incluso si la nube de Azure no está disponible temporalmente.
+  - **Usabilidad (Usability):** Facilitar al estudiante la reserva mediante un mapa interactivo intuitivo que reduzca el tiempo de búsqueda física en un 80%.
+
+#### 4.3.2.3 Choose One or More Elements of the System to Refine
+
+Se han seleccionado los componentes que gestionan la "inteligencia" y la "presencia física" del sistema:
+
+  - **Microservicio de Booking Management:** Responsable del ciclo de vida de las reservas y la gestión de slots de tiempo.
+  - **Contexto de IoT Device Monitoring:** Encargado de interpretar las señales de peso de los sensores para determinar el estado "Ocupado" o "Libre".
+  - **Edge API (Python Flask):** Elemento que reside cerca de los sensores para procesar datos antes de enviarlos a la nube.
+  - **Contexto de Cubicle Management (Refinamiento):** Para sincronizar el inventario físico con los datos provenientes de IoT.
+
+#### 4.3.2.4. Choose One or More Design Concepts That Satisfy the Selected Drivers
+
+Se aplican los siguientes conceptos técnicos para cumplir con los drivers:
+
+  - **Patrón CQRS:** Separa el modelo de comandos (CreateBooking) del modelo de consultas (GetAvailability), permitiendo lecturas extremadamente rápidas para el mapa en tiempo real.
+  - **Arquitectura Híbrida Edge-Cloud:** Utiliza procesamiento en el borde para reducir la latencia y el tráfico hacia la nube, cumpliendo con el driver de rendimiento.
+  - **Capa de Anticorrupción (ACL):** El microservicio de IoT provee datos técnicos que el microservicio de Cubicle adapta para no contaminar su lógica administrativa.
+  - **Notificaciones Asíncronas:** Uso de Twilio para confirmar reservas sin bloquear el flujo principal de la aplicación.
+
+#### 4.3.2.5. Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+
+Se definen los componentes internos y sus interacciones:
+
+  - **Agregado Booking:** Gestiona la consistencia de la reserva, validando que el usuario sea válido y el slot esté libre.
+  - **Entidad AvailabilitySlot:** Modela los bloques de tiempo de cada cubículo y su estado (Disponible/Reservado).
+  - **Componente IoT Gateway:** Recibe lecturas de los sensores en el borde y aplica filtros de ruido antes de reportar a la nube.
+
+  - **Interfaces de Comunicación:**
+      - `GET /api/v1/cubicles/{id}/schedule`: Consulta de slots para el mapa interactivo.
+      - `POST /api/v1/bookings`: Creación de reserva con validación de capacidad (mínimo 3-4 estudiantes).
+
+#### 4.3.2.6. Sketch Views (C4 & UML) and Record Design Decisions
+#### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
