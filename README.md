@@ -1224,6 +1224,56 @@ A continuación, se especifican los productos de software utilizados para colabo
 | **Swagger / OpenAPI** | Herramientas para la documentación interactiva y estandarizada de los servicios web (Cloud API y Edge API). | [https://swagger.io](https://swagger.io) |
 
 ### 5.2.2 Source Code Management
+
+En esta sección se describen los medios y esquemas de organización implementados para el seguimiento de modificaciones y el control de versiones durante el desarrollo de la solución Bibflip. Se utiliza la plataforma GitHub para la gestión centralizada del código fuente y la documentación técnica, garantizando un acceso unificado para todos los miembros del equipo. 
+
+Para organizar el trabajo de manera efectiva, se ha creado una organización específica en GitHub que actúa como el espacio común para todos los repositorios del proyecto.
+
+| Organización | URL |
+| :--- | :--- |
+| **UPC-PRE-202601-1ASI0657-7940-NOMBRE** | [https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE](https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE) |
+
+A continuación, se detallan los repositorios que integran la solución. Actualmente se cuenta con el repositorio destinado a la documentación del informe y se tiene prevista la futura integración de los componentes técnicos procedentes de la etapa previa del proyecto (Backend, Web Frontend, Mobile Application y Landing Page). 
+
+| Producto | URL del Repositorio |
+| :--- | :--- |
+| **Software Architecture Report** | [https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Report](https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Report) |
+| **Backend Web Services** | Pendiente de integración |
+| **Web Frontend Application** | Pendiente de integración |
+| **Mobile Application** | Pendiente de integración |
+| **Landing Page** | Pendiente de integración |
+
+**Implementación de GitFlow**
+
+Para el desarrollo de nuestro proyecto, implementaremos el modelo de ramificación **GitFlow**, el cual se aplicará de forma estandarizada en todos los repositorios de la solución para gestionar de manera ordenada el ciclo de vida de las características y versiones. 
+
+Se definen las siguientes ramas de trabajo obligatorias: 
+
+*   **main**: Rama principal que contiene exclusivamente el código estable y validado.
+*   **develop**: Rama base para la integración de nuevas funcionalidades. Sirve como base para la creación de otras ramas de trabajo.
+*   **feature**: Ramas temporales creadas para el desarrollo de tareas o historias de usuario específicas. Al finalizar, se fusionan con `develop`.
+*   **release**: Utilizada para preparar el código antes de un despliegue oficial, permitiendo realizar ajustes finales y control de calidad.
+*   **hotfixes**: Ramas destinadas a corregir errores críticos encontrados en la rama `main` sin interrumpir el flujo de desarrollo en `develop`.
+
+**Implementación de Conventional Commits**
+
+Con el fin de mantener un historial de cambios legible y estandarizado, aplicaremos la convención de **Conventional Commits** en todos los mensajes de confirmación. 
+
+La estructura de los mensajes de commit seguirá el siguiente formato: 
+
+`<tipo>[ámbito opcional]: <descripción>`
+
+Se utilizarán los siguientes tipos de commit para comunicar la intención del cambio: 
+
+1.  **feat**: Introducción de una nueva funcionalidad al código base.
+2.  **fix**: Corrección de un error detectado.
+3.  **doc**: Modificaciones exclusivamente en la documentación del proyecto.
+4.  **style**: Cambios estéticos o de formato que no afectan la lógica del código.
+5.  **refactor**: Reestructuración del código que no añade funcionalidades ni corrige errores.
+6.  **test**: Adición o modificación de pruebas unitarias o de aceptación.
+7.  **chore**: Tareas de mantenimiento, actualización de dependencias o configuración de herramientas.
+
+
 ### 5.2.3 Source Code Style Guide & Conventions
 ### 5.2.4 Software Deployment Configuration
 ## 5.3 Microservices Implementation
