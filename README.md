@@ -168,7 +168,7 @@ Consolidarse como la principal solución digital en el Perú para la gestión de
 
 |                       Photo                        |                      Description                      |
 | :------------------------------------------------: | :---------------------------------------------------: |
-| <img width="404" height="140" alt="foto" src="https://github.com/user-attachments/assets/9dde8619-ff29-4250-850a-9daeb7186c16" />| **Carranza Tesén, Joaquín** <br> Hola, soy Joaquín Carranza. Tengo 25 años y actualmente curso el séptimo ciclo de la carrera de Ingeniería de Software. Me gusta la tecnología y la forma en que ayuda a las personas a resolver problemas de manera más rápida y eficiente. Me interesa especialmente el manejo de datos y la ciberseguridad. Siento que puedo aportar a mi equipo ideas desde otra perspectiva, ya que siempre me cuestiono cómo se podría mejorar el producto o hacia qué objetivo estamos apuntando. |
+| [![joaquin.png](https://i.postimg.cc/G2fRDmh3/foto.png)](https://postimg.cc/vg5CFMVC) | **Carranza Tesén, Joaquín** <br> Hola, soy Joaquín Carranza. Tengo 25 años y actualmente curso el séptimo ciclo de la carrera de Ingeniería de Software. Me gusta la tecnología y la forma en que ayuda a las personas a resolver problemas de manera más rápida y eficiente. Me interesa especialmente el manejo de datos y la ciberseguridad. Siento que puedo aportar a mi equipo ideas desde otra perspectiva, ya que siempre me cuestiono cómo se podría mejorar el producto o hacia qué objetivo estamos apuntando. |
 | [![david.jpg](https://i.postimg.cc/zX8Bw1SK/1881dbb4-5d7f-4e6a-97e4-0c43780b41a0.jpg)](https://postimg.cc/G9gdrVfm) | **Rengifo Lozano, David** <br>  Soy David Rengifo Lozano, tengo 21 años y estoy cursando la carreta de ingenieria de software. Soy apasionado por la tecnologia, la ciencia y los negocios, me gusta crear valor percibible.|
 | [![pierovelarde.jpg](https://i.postimg.cc/pdj5nykJ/pierovelarde.jpg)](https://postimg.cc/Y4pC5r5v) | **Velarde Luyo, Piero Alberto** <br> Soy Piero, estudio la carrera de ingeniería de software en la Universidad Peruana de Ciencias Aplicadas. Escogí esta carrera por mi facilidad en el uso de las computadoras. Asímismo, por mi interés en el funcionamiento de las anteriores mencionadas y todo respecto a la programación y las tecnologías emergentes. |
 
@@ -1327,10 +1327,125 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 ## 5.3 Microservices Implementation
 ### 5.2.1 Sprint 1
 #### 5.2.1.1 Sprint Backlog 1
+
+| Sprint # | Sprint 1 | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story** | | **Work-Item / Task** | | | | |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US010 | Registro de cuenta de estudiante | T-001 | Formulario de registro | Crear interfaz con validaciones y términos. | 1.5 | Joaquín Carranza | Done |
+| | | T-002 | Servicio de Auth | Lógica de creación y manejo de duplicados. | 2 | David Rengifo | Done |
+| US011 | Inicio de sesión estudiante | T-001 | UI de Login | Diseñar pantalla de acceso para estudiantes. | 1 | Piero Velarde | Done |
+| | | T-002 | Endpoints de auth | Implementar validación de credenciales. | 2 | Joaquín Carranza | In Process |
+| US007 | Disponibilidad en tiempo real | T-001 | Lógica de estados | Procesar estados de cubículos (Libre/Ocupado). | 2 | David Rengifo | Done |
+| | | T-002 | Simulación de Sensores | Reflejar cambios de aforo en < 5 segundos. | 2.5 | Piero Velarde | In Process |
+| US008 | Reservar un cubículo | T-001 | Motor de Reservas | Lógica para evitar doble reserva activa. | 2 | Joaquín Carranza | To-Review |
+| | | T-002 | Integración de Sedes | Conectar selección de sede con disponibilidad. | 1.5 | David Rengifo | To-Do |
+| US012 | Agregar nuevos cubículos | T-001 | CRUD de Cubículos | Formulario para identificador y capacidad. | 1.5 | Piero Velarde | Done |
+| | | T-002 | Endpoint persistencia | Servicio backend para guardar cubículos. | 1.5 | Joaquín Carranza | Done |
+| US004 | Formulario de contacto | T-001 | UI Contacto | Vista de landing con campos obligatorios. | 1 | David Rengifo | Done |
+| | | T-002 | Notificaciones | Envío de datos al equipo de Bibflip. | 1.5 | Piero Velarde | In Process |
+| US016 | Inicio de sesión de administrador | T-001 | Panel Admin Auth | Acceso específico para administración sede. | 2 | Joaquín Carranza | Done |
+| | | T-002 | Registro de intentos | Log de seguridad para accesos fallidos. | 1 | David Rengifo | Done |
+
+<img width="859" height="602" alt="image" src="https://github.com/user-attachments/assets/5a421dc3-fb02-4359-8c2f-db2dec893a51" />
+
+[Link de trello](https://trello.com/b/AOlUPBwr/sprint-3)
+
 #### 5.2.1.2 Development Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 3c2a07a | feat: setup base backend architecture | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 37c6f1c | fix: update member validation logic | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | d11ca1c | feat: implement user authentication service | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | dcdc8e3 | feat: add reservation controller endpoints | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | b1448d8 | feat: integrate database persistence layer | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | d387891 | refactor: update api index routes | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | c0c028b | fix: change json response format | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 9362fee | feat: update environment configurations | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | f721597 | feat: implement profile management logic | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 60d8747 | fix: resolve profile image upload issues | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 93cd79e | feat: add logging middleware | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 68bfee9 | fix: edit profile controller parameters | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | d52ec96 | feat: add health check endpoint | - | 30/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 6e84afa | refactor: optimize database queries | - | 30/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 5d4b22a | feat: implement error handling global filter | - | 30/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | d5e68ba | feat: add cubicle status business logic | - | 13/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 0b5292a | feat: configure development server environment | - | 14/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 95777c9 | feat: implement resource management services | - | 14/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 20aeba6 | refactor: apply backend coding conventions | - | 14/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | bf487f5 | feat: initialize sprint backlog services | - | 14/05/2026 |
+
 #### 5.2.1.3 Testing Suite Evidence for Sprint Review
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | a1b2c3d | feat(tp): US001.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | e5f6g7h | feat(tp): US003.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | i8j9k0l | feat(tp): US004.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | m1n2o3p | feat(tp): US005.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | q4r5s6t | feat(tp): US006.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | u7v8w9x | feat(tp): US007.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | y0z1a2b | feat(tp): US008.feature | - | 17/05/2026 |
+
 #### 5.2.1.4 Execution Evidence for Sprint Review
+Durante el Sprint 1 se alcanzaron los endpoints de autenticación (login, recovery, change-password) y la Landing Page pública. A continuación se presentan capturas de pantalla de las operaciones realizadas vía Postman:
+
+**Captura 1: Login exitoso - POST /api/v1/auth/login**
+
+<img width="777" height="487" alt="image" src="https://github.com/user-attachments/assets/a00fc237-88e5-4ae3-a883-f1f2457b942d" />
+
+
+**Captura 2: Login fallido (credenciales inválidas)**
+
+<img width="763" height="446" alt="image" src="https://github.com/user-attachments/assets/a3d3867e-f60b-4b2d-a9d5-3e29ce722fda" />
+
+
+**Captura 3: Recuperación de contraseña - POST /api/v1/auth/recovery**
+
+<img width="767" height="463" alt="image" src="https://github.com/user-attachments/assets/eba2d70f-6f5b-472a-8de7-a97925c74728" />
+
+
+**Captura 4: Cambio de contraseña - POST /api/v1/auth/change-password**
+
+<img width="788" height="463" alt="image" src="https://github.com/user-attachments/assets/72270598-dcd0-4ab7-90a2-21ca6c411c31" />
+
+
+**Captura 5: Visualización de disponibilidad de cubículos - GET /api/v1/cubicles/available**
+
+<img width="764" height="529" alt="image" src="https://github.com/user-attachments/assets/deb000f8-3da6-480e-9023-a9b1112b5686" />
+
 #### 5.2.1.5 Microservices Documentation Evidence for Sprint Review
+Durante el Sprint 1 se documentaron los endpoints de autenticación utilizando OpenAPI 3.0 (Swagger). La documentación se encuentra disponible en el endpoint /swagger-ui/index.html del backend desplegado en Azure.
+
+Repositorio de Web Services: https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing
+**Commits relacionados con documentación:**
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| testing | tp | w5x6y7z | docs(openapi): add authentication endpoints documentation | Add OpenAPI annotations for login, recovery, and change-password endpoints with request/response schemas | 14/05/2026 |
+**Endpoints documentados en Sprint 1:**
+| Endpoint | HTTP Method | Sintaxis | Parámetros | Response (ejemplo) |
+| :--- | :--- | :--- | :--- | :--- |
+| /api/v1/auth/login | POST | {"email": "string", "password": "string"} | Body JSON con email y password | {"accessToken": "JWT", "refreshToken": "JWT"} |
+| /api/v1/auth/recovery | POST | {"email": "string"} | Body JSON con email | {"message": "Se ha enviado un código de recuperación..."} |
+| /api/v1/auth/change-password | POST | {"currentPassword": "string", "newPassword": "string"} | Header: Authorization: Bearer {token}, Body JSON | {"status": "success", "message": "Contraseña actualizada correctamente"} |
+| /api/v1/cubicles/available | GET | - | Query params (opcional) | [{"id": 1, "name": "Cubículo A-101", "status": "available", "capacity": 4}] |
+
+**Captura de Swagger UI:**
+<img width="939" height="390" alt="image" src="https://github.com/user-attachments/assets/71dea643-0d2b-4087-bd03-b5af7f399a62" />
+
+**Captura de documentación OpenAPI (YAML/JSON):**
+<img width="953" height="383" alt="image" src="https://github.com/user-attachments/assets/231edfb3-1652-43c1-9088-722543e357ca" />
+
+
 #### 5.2.1.6 Software Deployment Evidence for Sprint Review
+Ejecución y verificación de servicios:
+<img width="941" height="767" alt="image" src="https://github.com/user-attachments/assets/6ebb9c3d-5c99-4185-9e55-d2c0b0e5e3e0" />
+
 #### 5.2.1.7 Team Collaboration Insights during Sprint
+En nuestro equipo se han asignado bounded contexts para cada integrante, se adjunta evidencia del avance de cada uno durante el primer sprint.
+
+
 #### 5.2.1.8 Kanban Board 
+Al final del primer sprint, las actividades del proyecto se encuentran en estas etapas:
+
+<img width="1146" height="606" alt="image" src="https://github.com/user-attachments/assets/a7adb9b2-1de3-4c41-8e10-68209ad43c51" />
