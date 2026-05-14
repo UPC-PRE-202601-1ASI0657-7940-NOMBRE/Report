@@ -1166,6 +1166,63 @@ Se definen los componentes internos y sus interacciones:
 ### 5.1.4 Framework Pattern Driven Refactoring Report
 ## 5.2 Software Configuration Management
 ### 5.2.1 Software Development Environment Configuration
+
+A continuación, se especifican los productos de software utilizados para colaborar en el ciclo de vida y desarrollo de los productos de la solución Bibflip. Se consideran las herramientas empleadas en la gestión, documentación, diseño arquitectónico y desarrollo de software, respetando las restricciones tecnológicas indicadas para el curso.
+
+**Project Management**
+
+| Producto de Software | Descripción | Ruta de referencia o de descarga |
+| :--- | :--- | :--- |
+| **Trello** | Utilizado para el control del proyecto, seguimiento de sprints y asignación de tareas según las User Stories. | [https://www.trello.com/](https://www.trello.com/) |
+| **Google Meet** | Plataforma virtual para realizar las reuniones de equipo, sesiones de planificación y Daily Stand-ups. | [https://meet.google.com](https://meet.google.com) |
+| **Discord** | Herramienta de comunicación secundaria para la coordinación rápida y técnica entre los miembros del equipo. | [https://discord.com/](https://discord.com/) |
+
+**Requirements Management**
+
+| Producto de Software | Descripción | Ruta de referencia o de descarga |
+| :--- | :--- | :--- |
+| **UXPressia** | Empleado para la elaboración de artefactos de diseño centrado en el usuario como User Personas, Empathy Maps e Impact Maps. | [https://uxpressia.com/](https://uxpressia.com/) |
+| **Miro** | Plataforma de colaboración visual para la creación de los As-Is y To-Be Scenario Maps. | [https://miro.com/](https://miro.com/) |
+
+**Product Design**
+
+| Producto de Software | Descripción | Ruta de referencia o de descarga |
+| :--- | :--- | :--- |
+| **Figma** | Herramienta principal para el diseño de interfaces (UI), prototipado de alta fidelidad, wireframes y mock-ups. | [https://www.figma.com](https://www.figma.com) |
+| **LucidChart** | Utilizado para la diagramación del dominio, event storming y mapas de contexto. | [https://www.lucidchart.com](https://www.lucidchart.com) |
+| **Visual Paradigm** | Software especializado para la creación de diagramas de arquitectura bajo el modelo C4 y diagramas UML. | [https://www.visual-paradigm.com](https://www.visual-paradigm.com) |
+
+**Software Development**
+
+| Producto de Software | Descripción | Ruta de referencia o de descarga |
+| :--- | :--- | :--- |
+| **IntelliJ IDEA** | Entorno de desarrollo integrado (IDE) estándar para la codificación del Backend utilizando Java Spring Boot. | [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/) |
+| **Visual Studio Code** | Editor de código fuente utilizado para el desarrollo del Web Frontend (Vue.js) y la aplicación móvil (Flutter). | [https://code.visualstudio.com/](https://code.visualstudio.com/) |
+| **Git** | Sistema de control de versiones distribuido para la gestión del código fuente. | [https://git-scm.com](https://git-scm.com) |
+| **GitHub** | Plataforma de alojamiento para los repositorios del proyecto, facilitando la integración de GitFlow y Conventional Commits. | [https://github.com](https://github.com) |
+| **Wokwi** | Simulador de electrónica online utilizado para validar el comportamiento del firmware en sistemas embebidos ESP32 antes de la integración física. | [https://wokwi.com/](https://wokwi.com/) |
+
+**Software Testing**
+
+| Producto de Software | Descripción | Ruta de referencia o de descarga |
+| :--- | :--- | :--- |
+| **Gherkin** | Lenguaje de especificación para la redacción de Acceptance Tests basados en el comportamiento del usuario. | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/) |
+| **Postman** | Herramienta para el testeo y validación de los endpoints de la API REST. | [https://www.postman.com/](https://www.postman.com/) |
+
+**Software Deployment**
+
+| Producto de Software | Descripción | Ruta de referencia o de descarga |
+| :--- | :--- | :--- |
+| **GitHub Pages** | Servicio utilizado para el despliegue y alojamiento de la Landing Page del proyecto. | [https://pages.github.com/](https://pages.github.com/) |
+| **Firebase** | Plataforma empleada para el despliegue del Frontend Web y la distribución de la aplicación móvil. | [https://firebase.google.com/](https://firebase.google.com/) |
+| **Microsoft Azure** | Infraestructura en la nube utilizada para el despliegue de los microservicios, bases de datos MySQL y gestión de IoT Hub. | [https://azure.microsoft.com/](https://azure.microsoft.com/) |
+
+**Software Documentation**
+
+| Producto de Software | Descripción | Ruta de referencia o de descarga |
+| :--- | :--- | :--- |
+| **Swagger / OpenAPI** | Herramientas para la documentación interactiva y estandarizada de los servicios web (Cloud API y Edge API). | [https://swagger.io](https://swagger.io) |
+
 ### 5.2.2 Source Code Management
 ### 5.2.3 Source Code Style Guide & Conventions
 ### 5.2.4 Software Deployment Configuration
