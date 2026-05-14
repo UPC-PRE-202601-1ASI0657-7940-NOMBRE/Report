@@ -1382,6 +1382,29 @@ Durante el Sprint 1 se alcanzaron los endpoints de autenticación (login, recove
 <img width="764" height="529" alt="image" src="https://github.com/user-attachments/assets/deb000f8-3da6-480e-9023-a9b1112b5686" />
 
 #### 5.2.1.5 Microservices Documentation Evidence for Sprint Review
+Durante el Sprint 1 se documentaron los endpoints de autenticación utilizando OpenAPI 3.0 (Swagger). La documentación se encuentra disponible en el endpoint /swagger-ui/index.html del backend desplegado en Azure.
+
+Repositorio de Web Services: https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing
+**Commits relacionados con documentación:**
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| testing | tp | w5x6y7z | docs(openapi): add authentication endpoints documentation | Add OpenAPI annotations for login, recovery, and change-password endpoints with request/response schemas | 14/05/2026 |
+**Endpoints documentados en Sprint 1:**
+| Endpoint | HTTP Method | Sintaxis | Parámetros | Response (ejemplo) |
+| :--- | :--- | :--- | :--- | :--- |
+| /api/v1/auth/login | POST | {"email": "string", "password": "string"} | Body JSON con email y password | {"accessToken": "JWT", "refreshToken": "JWT"} |
+| /api/v1/auth/recovery | POST | {"email": "string"} | Body JSON con email | {"message": "Se ha enviado un código de recuperación..."} |
+| /api/v1/auth/change-password | POST | {"currentPassword": "string", "newPassword": "string"} | Header: Authorization: Bearer {token}, Body JSON | {"status": "success", "message": "Contraseña actualizada correctamente"} |
+| /api/v1/cubicles/available | GET | - | Query params (opcional) | [{"id": 1, "name": "Cubículo A-101", "status": "available", "capacity": 4}] |
+
+**Captura de Swagger UI:**
+<img width="939" height="390" alt="image" src="https://github.com/user-attachments/assets/71dea643-0d2b-4087-bd03-b5af7f399a62" />
+
+**Captura de documentación OpenAPI (YAML/JSON):**
+<img width="953" height="383" alt="image" src="https://github.com/user-attachments/assets/231edfb3-1652-43c1-9088-722543e357ca" />
+
+
 #### 5.2.1.6 Software Deployment Evidence for Sprint Review
+
 #### 5.2.1.7 Team Collaboration Insights during Sprint
 #### 5.2.1.8 Kanban Board 
