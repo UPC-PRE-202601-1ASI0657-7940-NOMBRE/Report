@@ -1161,9 +1161,42 @@ Se definen los componentes internos y sus interacciones:
 
 ## 5.1 Testing Suites & General Patterns
 ### 5.1.1 Backend Application Core Testing Suite
+
+[![image.png](https://i.postimg.cc/bNtyQktR/image.png)](https://postimg.cc/ppPMv9k9)
+
+En esta sección explicamos que el enfoque de pruebas se centra en la estabilidad del ecosistema de Spring Boot y la integridad de los componentes.
+
+Smoke Testing & Context Loading: Se utiliza la anotación @SpringBootTest para realizar pruebas de humo que aseguran que el contexto de la aplicación, las dependencias inyectadas y la conectividad con la base de datos carguen correctamente (como se observa en image_8480df.png).
+
+Behavioral Verification: El enfoque de pruebas está diseñado para validar el manejo de Commands y Queries de manera independiente, asegurando que cada flujo de negocio cumpla con las reglas del dominio.
 ### 5.1.2 Pattern Based Backend Application(s)
+[![image.png](https://i.postimg.cc/6383gS8T/image.png)](https://postimg.cc/2bfrB0Ff)
+
+[![image.png](https://i.postimg.cc/W43bqK6F/image.png)](https://postimg.cc/5XhMZsrb)
+
+Aquí documentamos cómo el código implementa patrones de diseño de alto nivel.
+
+CQRS Pattern (Command Query Responsibility Segregation): La aplicación separa estrictamente las operaciones de escritura (gestión de reservas) de las de lectura (consultas de disponibilidad). Esto es evidente al separar BookingCommandService (para acciones como crear o borrar) de BookingQueryService (para obtener datos), optimizando el rendimiento y la escalabilidad.
+
+Assembler Pattern (DTO Transformation): Utilizas una capa de transformación (como BookingResourceFromEntityAssembler) para convertir entidades del dominio en recursos REST (DTOs). Esto evita el acoplamiento entre la base de datos y la API externa.
+
+Thin Controllers: Los controladores (como BookingController.java) actúan solo como orquestadores. No contienen lógica de negocio; su única función es mapear peticiones HTTP a objetos Command o Query y delegarlos a los servicios correspondientes.
+
 ### 5.1.3 Pattern Based Custom Software Library
+[![image.png](https://i.postimg.cc/DzHFJzwN/image.png)](https://postimg.cc/GBF66dYP)
+
+Aunque no tengamos una "librería" externa, el código tiene un Shared Kernel que funciona como tal.
+
+Global Exception Handling Middleware: Implementación del patrón Advice mediante ControllerExceptionHandler.java. Este componente centraliza el manejo de errores (como ResourceNotFoundException), asegurando que la API responda de forma consistente con códigos de estado HTTP estandarizados.
+
+Standardized API Resources: Uso de recursos compartidos como SuccessMessage y ErrorMessage para uniformar las respuestas del sistema, lo que facilita el consumo de la API por parte del frontend (React/Inertia).
+
+Logging Strategy: Integración sistemática de SLF4J en los controladores para la trazabilidad de operaciones críticas, especialmente para flujos que interactúan con dispositivos externos como sensores IoT.
 ### 5.1.4 Framework Pattern Driven Refactoring Report
+
+[![image.png](https://i.postimg.cc/mrx8PfG6/image.png)](https://postimg.cc/zyjnQQvn)
+
+El proceso de refactorización se centró en la transición de una lógica de "Script de Transacción" hacia un modelo de Arquitectura Dirigida por el Dominio (DDD). Inicialmente, las operaciones de negocio estaban acopladas a la infraestructura; tras el refactorizado, se implementaron patrones de Spring Boot para desacoplar los puntos de entrada (como los sensores IoT) de la lógica core.
 ## 5.2 Software Configuration Management
 ### 5.2.1 Software Development Environment Configuration
 
@@ -1416,4 +1449,3 @@ En nuestro equipo se han asignado bounded contexts para cada integrante, se adju
 Al final del primer sprint, las actividades del proyecto se encuentran en estas etapas:
 
 <img width="1146" height="606" alt="image" src="https://github.com/user-attachments/assets/a7adb9b2-1de3-4c41-8e10-68209ad43c51" />
-
