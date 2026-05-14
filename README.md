@@ -1443,6 +1443,7 @@ Ejecución y verificación de servicios:
 
 #### 5.2.1.7 Team Collaboration Insights during Sprint
 En nuestro equipo se han asignado bounded contexts para cada integrante, se adjunta evidencia del avance de cada uno durante el primer sprint.
+<img width="1012" height="749" alt="image" src="https://github.com/user-attachments/assets/cddc1c5f-af79-45bf-960f-35f881dcb9b7" />
 
 
 #### 5.2.1.8 Kanban Board 
