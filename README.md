@@ -1405,6 +1405,15 @@ Repositorio de Web Services: https://github.com/UPC-PRE-202601-1ASI0657-7940-NOM
 
 
 #### 5.2.1.6 Software Deployment Evidence for Sprint Review
+Ejecución y verificación de servicios:
+<img width="941" height="767" alt="image" src="https://github.com/user-attachments/assets/6ebb9c3d-5c99-4185-9e55-d2c0b0e5e3e0" />
 
 #### 5.2.1.7 Team Collaboration Insights during Sprint
+En nuestro equipo se han asignado bounded contexts para cada integrante, se adjunta evidencia del avance de cada uno durante el primer sprint.
+
+
 #### 5.2.1.8 Kanban Board 
+Al final del primer sprint, las actividades del proyecto se encuentran en estas etapas:
+
+<img width="1146" height="606" alt="image" src="https://github.com/user-attachments/assets/a7adb9b2-1de3-4c41-8e10-68209ad43c51" />
+
