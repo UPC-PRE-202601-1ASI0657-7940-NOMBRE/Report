@@ -1275,6 +1275,21 @@ Se utilizarán los siguientes tipos de commit para comunicar la intención del c
 
 
 ### 5.2.3 Source Code Style Guide & Conventions
+
+Para el desarrollo de la solución Bibflip, el equipo ha establecido un conjunto de directrices y convenciones de codificación para cada lenguaje de programación y marcado utilizado. El objetivo es garantizar la legibilidad, coherencia y facilidad de mantenimiento del código fuente en todos los repositorios. Aplicaremos buenas prácticas que aseguren el cumplimiento de principios de desarrollo limpio y faciliten la colaboración técnica entre los miembros del equipo.
+
+A continuación, se presentan las referencias y convenciones adoptadas para los elementos de cada lenguaje:
+
+| Lenguaje | Referencias y Convenciones |
+| :--- | :--- |
+| **HTML** | - Utilizar la estructura de documento propia de HTML5, especificando `<!DOCTYPE html>`.<br>- Usar codificación UTF-8 para garantizar la compatibilidad de caracteres.<br>- Utilizar siempre minúsculas (lowercase) para nombres de etiquetas y atributos.<br>- Incluir obligatoriamente el atributo `alt` en las imágenes para accesibilidad.<br>- Mantener una indentación consistente (2 o 4 espacios) para mejorar la jerarquía visual. |
+| **CSS** | - Separar palabras con guiones (`-`) en lugar de espacios o subrayados (convención kebab-case).<br>- Utilizar unidades relativas (como `em`, `rem` o `%`) para definir tamaños, favoreciendo el diseño responsivo.<br>- Emplear nombres descriptivos para las clases e identificadores según su propósito funcional.<br>- Evitar el uso de estilos en línea (inline styles), priorizando el uso de archivos externos. |
+| **Java (Backend)** | - Las clases e interfaces deben nombrarse con sustantivos en PascalCase (ej. `BookingService`).<br>- Los nombres de métodos y variables deben seguir la convención lowerCamelCase (ej. `createReservation`).<br>- Organizar el código siguiendo el patrón de arquitectura en capas (Interface, Application, Domain, Infrastructure).<br>- Limitar la longitud de los métodos para que realicen una única función clara (Principio de Responsabilidad Única).<br>- Manejar adecuadamente las excepciones con mensajes descriptivos y registros de log. |
+| **Python (Edge API)** | - Seguir las recomendaciones de la guía de estilo **PEP 8**.<br>- Nombres de funciones y variables en snake_case (ej. `get_sensor_data`).<br>- Nombres de clases en PascalCase (ej. `SensorController`).<br>- Utilizar docstrings para documentar la funcionalidad de los endpoints y procesos de análisis local. |
+| **Dart (Flutter)** | - Los nombres de variables, métodos y funciones deben usar lowerCamelCase.<br>- Los nombres de clases, enumeraciones y tipos deben usar UpperCamelCase (PascalCase).<br>- Los nombres de archivos, bibliotecas y paquetes deben escribirse en minúsculas con guiones bajos (snake_case).<br>- Preferir el uso de constantes (`const`) para optimizar el rendimiento de la interfaz móvil.<br>- Utilizar inicialización diferida (`late`) solo cuando sea estrictamente necesario. |
+| **Gherkin** | - Seguir la estructura estándar `Given`, `When`, `Then` y `And` para la redacción de escenarios de prueba.<br>- Utilizar un archivo `.feature` independiente por cada funcionalidad o historia de usuario.<br>- Describir escenarios de uso único que sean lo más independientes posible de otras funcionalidades.<br>- Redactar los pasos en un lenguaje de negocio claro y entendible para los stakeholders. |
+
+
 ### 5.2.4 Software Deployment Configuration
 ## 5.3 Microservices Implementation
 ### 5.2.1 Sprint 1
