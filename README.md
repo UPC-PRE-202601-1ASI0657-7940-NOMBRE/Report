@@ -1355,6 +1355,32 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | y0z1a2b | feat(tp): US008.feature | - | 17/05/2026 |
 
 #### 5.2.1.4 Execution Evidence for Sprint Review
+Durante el Sprint 1 se alcanzaron los endpoints de autenticación (login, recovery, change-password) y la Landing Page pública. A continuación se presentan capturas de pantalla de las operaciones realizadas vía Postman:
+
+**Captura 1: Login exitoso - POST /api/v1/auth/login**
+
+<img width="777" height="487" alt="image" src="https://github.com/user-attachments/assets/a00fc237-88e5-4ae3-a883-f1f2457b942d" />
+
+
+**Captura 2: Login fallido (credenciales inválidas)**
+
+<img width="763" height="446" alt="image" src="https://github.com/user-attachments/assets/a3d3867e-f60b-4b2d-a9d5-3e29ce722fda" />
+
+
+**Captura 3: Recuperación de contraseña - POST /api/v1/auth/recovery**
+
+<img width="767" height="463" alt="image" src="https://github.com/user-attachments/assets/eba2d70f-6f5b-472a-8de7-a97925c74728" />
+
+
+**Captura 4: Cambio de contraseña - POST /api/v1/auth/change-password**
+
+<img width="788" height="463" alt="image" src="https://github.com/user-attachments/assets/72270598-dcd0-4ab7-90a2-21ca6c411c31" />
+
+
+**Captura 5: Visualización de disponibilidad de cubículos - GET /api/v1/cubicles/available**
+
+<img width="764" height="529" alt="image" src="https://github.com/user-attachments/assets/deb000f8-3da6-480e-9023-a9b1112b5686" />
+
 #### 5.2.1.5 Microservices Documentation Evidence for Sprint Review
 #### 5.2.1.6 Software Deployment Evidence for Sprint Review
 #### 5.2.1.7 Team Collaboration Insights during Sprint
