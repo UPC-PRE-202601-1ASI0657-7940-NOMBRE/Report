@@ -1314,6 +1314,10 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 | US016 | Inicio de sesión de administrador | T-001 | Panel Admin Auth | Acceso específico para administración sede. | 2 | Joaquín Carranza | Done |
 | | | T-002 | Registro de intentos | Log de seguridad para accesos fallidos. | 1 | David Rengifo | Done |
 
+<img width="859" height="602" alt="image" src="https://github.com/user-attachments/assets/5a421dc3-fb02-4359-8c2f-db2dec893a51" />
+
+[Link de trello](https://trello.com/b/AOlUPBwr/sprint-3)
+
 #### 5.2.1.2 Development Evidence for Sprint Review
 #### 5.2.1.3 Testing Suite Evidence for Sprint Review
 #### 5.2.1.4 Execution Evidence for Sprint Review
