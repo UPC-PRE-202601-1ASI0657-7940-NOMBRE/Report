@@ -1319,7 +1319,41 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 [Link de trello](https://trello.com/b/AOlUPBwr/sprint-3)
 
 #### 5.2.1.2 Development Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 3c2a07a | feat: setup base backend architecture | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 37c6f1c | fix: update member validation logic | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | d11ca1c | feat: implement user authentication service | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | dcdc8e3 | feat: add reservation controller endpoints | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | b1448d8 | feat: integrate database persistence layer | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | d387891 | refactor: update api index routes | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | c0c028b | fix: change json response format | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 9362fee | feat: update environment configurations | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | f721597 | feat: implement profile management logic | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 60d8747 | fix: resolve profile image upload issues | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 93cd79e | feat: add logging middleware | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 68bfee9 | fix: edit profile controller parameters | - | 14/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | d52ec96 | feat: add health check endpoint | - | 30/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 6e84afa | refactor: optimize database queries | - | 30/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 5d4b22a | feat: implement error handling global filter | - | 30/04/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | d5e68ba | feat: add cubicle status business logic | - | 13/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 0b5292a | feat: configure development server environment | - | 14/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 95777c9 | feat: implement resource management services | - | 14/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 20aeba6 | refactor: apply backend coding conventions | - | 14/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | bf487f5 | feat: initialize sprint backlog services | - | 14/05/2026 |
+
 #### 5.2.1.3 Testing Suite Evidence for Sprint Review
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | a1b2c3d | feat(tp): US001.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | e5f6g7h | feat(tp): US003.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | i8j9k0l | feat(tp): US004.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | m1n2o3p | feat(tp): US005.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | q4r5s6t | feat(tp): US006.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | u7v8w9x | feat(tp): US007.feature | - | 17/05/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | y0z1a2b | feat(tp): US008.feature | - | 17/05/2026 |
+
 #### 5.2.1.4 Execution Evidence for Sprint Review
 #### 5.2.1.5 Microservices Documentation Evidence for Sprint Review
 #### 5.2.1.6 Software Deployment Evidence for Sprint Review
