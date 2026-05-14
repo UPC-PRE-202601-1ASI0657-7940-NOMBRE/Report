@@ -1294,6 +1294,26 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 ## 5.3 Microservices Implementation
 ### 5.2.1 Sprint 1
 #### 5.2.1.1 Sprint Backlog 1
+
+| Sprint # | Sprint 1 | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story** | | **Work-Item / Task** | | | | |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US010 | Registro de cuenta de estudiante | T-001 | Formulario de registro | Crear interfaz con validaciones y términos. | 1.5 | Joaquín Carranza | Done |
+| | | T-002 | Servicio de Auth | Lógica de creación y manejo de duplicados. | 2 | David Rengifo | Done |
+| US011 | Inicio de sesión estudiante | T-001 | UI de Login | Diseñar pantalla de acceso para estudiantes. | 1 | Piero Velarde | Done |
+| | | T-002 | Endpoints de auth | Implementar validación de credenciales. | 2 | Joaquín Carranza | In Process |
+| US007 | Disponibilidad en tiempo real | T-001 | Lógica de estados | Procesar estados de cubículos (Libre/Ocupado). | 2 | David Rengifo | Done |
+| | | T-002 | Simulación de Sensores | Reflejar cambios de aforo en < 5 segundos. | 2.5 | Piero Velarde | In Process |
+| US008 | Reservar un cubículo | T-001 | Motor de Reservas | Lógica para evitar doble reserva activa. | 2 | Joaquín Carranza | To-Review |
+| | | T-002 | Integración de Sedes | Conectar selección de sede con disponibilidad. | 1.5 | David Rengifo | To-Do |
+| US012 | Agregar nuevos cubículos | T-001 | CRUD de Cubículos | Formulario para identificador y capacidad. | 1.5 | Piero Velarde | Done |
+| | | T-002 | Endpoint persistencia | Servicio backend para guardar cubículos. | 1.5 | Joaquín Carranza | Done |
+| US004 | Formulario de contacto | T-001 | UI Contacto | Vista de landing con campos obligatorios. | 1 | David Rengifo | Done |
+| | | T-002 | Notificaciones | Envío de datos al equipo de Bibflip. | 1.5 | Piero Velarde | In Process |
+| US016 | Inicio de sesión de administrador | T-001 | Panel Admin Auth | Acceso específico para administración sede. | 2 | Joaquín Carranza | Done |
+| | | T-002 | Registro de intentos | Log de seguridad para accesos fallidos. | 1 | David Rengifo | Done |
+
 #### 5.2.1.2 Development Evidence for Sprint Review
 #### 5.2.1.3 Testing Suite Evidence for Sprint Review
 #### 5.2.1.4 Execution Evidence for Sprint Review
