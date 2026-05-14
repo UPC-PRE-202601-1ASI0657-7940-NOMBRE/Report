@@ -1162,7 +1162,7 @@ Se definen los componentes internos y sus interacciones:
 ## 5.1 Testing Suites & General Patterns
 ### 5.1.1 Backend Application Core Testing Suite
 
---IMAGEN DE CODIGO TEST--
+[![image.png](https://i.postimg.cc/bNtyQktR/image.png)](https://postimg.cc/ppPMv9k9)
 
 En esta sección explicamos que el enfoque de pruebas se centra en la estabilidad del ecosistema de Spring Boot y la integridad de los componentes.
 
@@ -1170,7 +1170,9 @@ Smoke Testing & Context Loading: Se utiliza la anotación @SpringBootTest para r
 
 Behavioral Verification: El enfoque de pruebas está diseñado para validar el manejo de Commands y Queries de manera independiente, asegurando que cada flujo de negocio cumpla con las reglas del dominio.
 ### 5.1.2 Pattern Based Backend Application(s)
---IMAGEN DE CONTROLLER Y SERVICE---
+[![image.png](https://i.postimg.cc/6383gS8T/image.png)](https://postimg.cc/2bfrB0Ff)
+
+[![image.png](https://i.postimg.cc/W43bqK6F/image.png)](https://postimg.cc/5XhMZsrb)
 
 Aquí documentamos cómo el código implementa patrones de diseño de alto nivel.
 
@@ -1181,7 +1183,7 @@ Assembler Pattern (DTO Transformation): Utilizas una capa de transformación (co
 Thin Controllers: Los controladores (como BookingController.java) actúan solo como orquestadores. No contienen lógica de negocio; su única función es mapear peticiones HTTP a objetos Command o Query y delegarlos a los servicios correspondientes.
 
 ### 5.1.3 Pattern Based Custom Software Library
---MIDDLEWARE--
+[![image.png](https://i.postimg.cc/DzHFJzwN/image.png)](https://postimg.cc/GBF66dYP)
 
 Aunque no tengamos una "librería" externa, el código tiene un Shared Kernel que funciona como tal.
 
@@ -1191,6 +1193,10 @@ Standardized API Resources: Uso de recursos compartidos como SuccessMessage y Er
 
 Logging Strategy: Integración sistemática de SLF4J en los controladores para la trazabilidad de operaciones críticas, especialmente para flujos que interactúan con dispositivos externos como sensores IoT.
 ### 5.1.4 Framework Pattern Driven Refactoring Report
+
+[![image.png](https://i.postimg.cc/mrx8PfG6/image.png)](https://postimg.cc/zyjnQQvn)
+
+El proceso de refactorización se centró en la transición de una lógica de "Script de Transacción" hacia un modelo de Arquitectura Dirigida por el Dominio (DDD). Inicialmente, las operaciones de negocio estaban acopladas a la infraestructura; tras el refactorizado, se implementaron patrones de Spring Boot para desacoplar los puntos de entrada (como los sensores IoT) de la lógica core.
 ## 5.2 Software Configuration Management
 ### 5.2.1 Software Development Environment Configuration
 
