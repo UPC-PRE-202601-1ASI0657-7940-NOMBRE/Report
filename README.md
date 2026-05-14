@@ -1442,7 +1442,9 @@ Repositorio de Web Services: https://github.com/UPC-PRE-202601-1ASI0657-7940-NOM
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | testing | tp | w5x6y7z | docs(openapi): add authentication endpoints documentation | Add OpenAPI annotations for login, recovery, and change-password endpoints with request/response schemas | 14/05/2026 |
+
 **Endpoints documentados en Sprint 1:**
+
 | Endpoint | HTTP Method | Sintaxis | Parámetros | Response (ejemplo) |
 | :--- | :--- | :--- | :--- | :--- |
 | /api/v1/auth/login | POST | {"email": "string", "password": "string"} | Body JSON con email y password | {"accessToken": "JWT", "refreshToken": "JWT"} |
