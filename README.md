@@ -5,7 +5,7 @@
     <strong>1ASI0657 - Fundamentos de Arquitectura de Software</strong><br>
     <br><strong>NRC 7940</strong><br>
     <br><strong>Profesor: Daniel Enrique Mori Yzaguirre</strong><br>
-    <br><strong><b>INFORME DEL TRABAJO PARCIAL</strong></b><br>
+    <br><strong><b>Avance del trabajo final</strong></b><br>
 </p>
 
 <p align="center">
@@ -151,7 +151,16 @@ En esta sección se resumen los avances y modificaciones realizadas durante el c
     - [5.2.1.5. Microservices Documentation Evidence for Sprint Review](#5215-microservices-documentation-evidence-for-sprint-review)
     - [5.2.1.6. Software Deployment Evidence for Sprint Review](#5216-software-deployment-evidence-for-sprint-review)
     - [5.2.1.7. Team Collaboration Insights during Sprint](#5217-team-collaboration-insights-during-sprint)
-    - [5.2.1.8. Kanban Board --> TP1](#5218-kanban-board-tp1)
+    - [5.2.1.8. Kanban Board](#5218-kanban-board-tp1)
+  - [5.2.2. Sprint 2](#521-sprint-1)
+    - [5.2.2.1. Sprint Backlog 2](#5211-sprint-backlog-1)
+    - [5.2.2.2. Development Evidence for Sprint Review](#5212-development-evidence-for-sprint-review)
+    - [5.2.2.3. Testing Suite Evidence for Sprint Review](#5213-testing-suite-evidence-for-sprint-review)
+    - [5.2.2.4. Execution Evidence for Sprint Review](#5214-execution-evidence-for-sprint-review)
+    - [5.2.2.5. Microservices Documentation Evidence for Sprint Review](#5215-microservices-documentation-evidence-for-sprint-review)
+    - [5.2.2.6. Software Deployment Evidence for Sprint Review](#5216-software-deployment-evidence-for-sprint-review)
+    - [5.2.2.7. Team Collaboration Insights during Sprint](#5217-team-collaboration-insights-during-sprint)
+    - [5.2.2.8. Kanban Board](#5218-kanban-board-tp1)
 
 ---
 
@@ -1472,3 +1481,30 @@ En nuestro equipo se han asignado bounded contexts para cada integrante, se adju
 Al final del primer sprint, las actividades del proyecto se encuentran en estas etapas:
 
 <img width="1146" height="606" alt="image" src="https://github.com/user-attachments/assets/a7adb9b2-1de3-4c41-8e10-68209ad43c51" />
+
+### 5.2.2 Sprint 2
+#### 5.2.2.1 Sprint Backlog 2
+
+| **Sprint #** | **Sprint 2** | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story Id** | **Title** | **Work-Item / Task Id** | **Work-Item / Task Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| **TS008** | **Configuración de Infraestructura** | BP-154 | Crear el API Gateway | Implementación del punto de entrada único (Spring Cloud Gateway) para gestionar el tráfico hacia los microservicios. | 3 | Piero Velarde | Done |
+| | | BP-153 | Crear el server discovery (Eureka) | Configuración del servidor de descubrimiento para el registro y localización dinámica de servicios. | 2.5 | David Rengifo | Done |
+| **US008** | **Reservar un cubículo** | BP-150 | Crear el servicio Booking | Desarrollo del microservicio independiente para la lógica de transacciones de reserva y gestión de slots. | 4 | Joaquín Carranza | In Process |
+| **US014** | **Ver la sede asignada** | BP-151 | Crear el servicio Branching | Implementación del microservicio encargado de administrar las sedes, horarios y ubicación geográfica. | 3.5 | David Rengifo | In Process |
+| **US016** | **Inicio de sesión administrador** | BP-152 | Crear el servicio IAM | Migración de la lógica de identidad, autenticación y roles a un microservicio centralizado de seguridad. | 4 | Piero Velarde | In Process |
+| **TS001** | **Obtener cubículos** | T-001 | Endpoint para lista de cubículos | Implementar la lógica de API para que el frontend obtenga la lista de cubículos por sede específica. | 2 | Joaquín Carranza | Done |
+| **TS007** | **Simular Sensores en Wokwi** | T-001 | Simulación de circuito ESP32 | Validación de la lectura del sensor de peso y transmisión de datos hacia el Edge API mediante Wokwi. | 3 | David Rengifo | Done |
+| **TS009** | **Integración y Validación** | BP-155 | Verificar funcionamiento simultáneo | Ejecución de pruebas de comunicación entre el Gateway y los microservicios en simultáneo para asegurar interoperabilidad. | 2 | Joaquín Carranza | To-do |
+
+[![Captura-Kanban-Av3.png](https://i.postimg.cc/Kvg5xgm1/Captura-Kanban-Av3.png)](https://postimg.cc/QHh7qC9D)
+
+Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2](https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2)
+#### 5.2.2.2 Development Evidence for Sprint Review
+
+#### 5.2.2.3 Testing Suite Evidence for Sprint Review
+#### 5.2.2.4 Execution Evidence for Sprint Review
+#### 5.2.2.5 Microservices Documentation Evidence for Sprint Review
+#### 5.2.2.6 Software Deployment Evidence for Sprint Review
+#### 5.2.2.7 Team Collaboration Insights during Sprint
+#### 5.2.2.8 Kanban Board 
