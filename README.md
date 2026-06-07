@@ -1515,6 +1515,17 @@ Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/pr
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-service | develop | `x2w1v0u` | **feat: implement JWT token validation** | Centralized security logic for user session management in the new service. | 07/06/2026 |
 
 #### 5.2.2.3 Testing Suite Evidence for Sprint Review
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-testing | develop | `z5x4y3w` | **test: add JWT validation unit tests** | Validate token extraction and claim verification in IAM service. | 04/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking-testing | develop | `v2u1t0s` | **test: add booking creation scenarios** | Implement Gherkin feature for US008: Cubicle reservation logic. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-branching-testing | develop | `r9q8p7o` | **test: add headquarter lookup tests** | Unit tests for repository and service layer in branching context. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway-testing | main | `n6m5l4k` | **test: route forwarding verification** | Automated tests to ensure gateway redirects to IAM and Branching. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | `j3k2i1h` | **test: US016.feature for admin login** | Define acceptance criteria for admin authentication in Gherkin. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | `g0f9e8d` | **test: TS001.feature for cubicle lookup** | Gherkin scenario for retrieving cubicle list by headquarter. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking-testing | develop | `c7b6a5z` | **test: weight sensor state updates** | Verify IoT state changes (TS007) via integration tests. | 07/06/2026 |
+
 #### 5.2.2.4 Execution Evidence for Sprint Review
 #### 5.2.2.5 Microservices Documentation Evidence for Sprint Review
 #### 5.2.2.6 Software Deployment Evidence for Sprint Review
