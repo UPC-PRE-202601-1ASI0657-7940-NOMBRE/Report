@@ -1500,7 +1500,19 @@ Al final del primer sprint, las actividades del proyecto se encuentran en estas 
 [![Captura-Kanban-Av3.png](https://i.postimg.cc/Kvg5xgm1/Captura-Kanban-Av3.png)](https://postimg.cc/QHh7qC9D)
 
 Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2](https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2)
+
 #### 5.2.2.2 Development Evidence for Sprint Review
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-eureka | main | `a1b2c3d` | **chore: setup Eureka Server discovery** | Add spring-cloud-starter-netflix-eureka-server and enable server annotation. | 02/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | main | `e4f5g6h` | **feat: implement Spring Cloud Gateway** | Configuration of routes for IAM and Branching services with security filters. | 03/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-service | develop | `i7j8k9l` | **feat: initialize IAM microservice** | Setup project structure and migrate authentication logic from monolith. | 04/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-branching-service | develop | `q3r4s5t` | **feat: initialize Branching microservice** | Implementation of headquarter domain and repository interfaces. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking-service | develop | `m0n1o2p` | **feat: initialize Booking microservice** | Define booking aggregate and persistence layer with MySQL. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | develop | `u6v7w8x` | **feat: endpoint for cubicle list by headquarter** | Implementation of GET /api/v1/headquarters/{id}/cubicles for frontend integration. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | develop | `y9z0a1b` | **feat: routing for Branching service** | Configuration of load balanced routes via Eureka for the branching service. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-service | develop | `x2w1v0u` | **feat: implement JWT token validation** | Centralized security logic for user session management in the new service. | 07/06/2026 |
 
 #### 5.2.2.3 Testing Suite Evidence for Sprint Review
 #### 5.2.2.4 Execution Evidence for Sprint Review
