@@ -1541,6 +1541,46 @@ A continuación se mostrará la ejecución de una creación de un usuario admini
 [![Swagger-auth-si.png](https://i.postimg.cc/bNjKX8j9/Swagger-auth-si.png)](https://postimg.cc/7bmB7Fh5)
 
 #### 5.2.2.5 Microservices Documentation Evidence for Sprint Review
+
+
+En esta sección se presenta la evidencia de la correcta ejecución y respuesta de los endpoints desarrollados durante el Sprint 2. Las pruebas se realizaron consumiendo los microservicios a través del **API Gateway**, validando la integración con **Eureka** para el descubrimiento de servicios y la persistencia en **Azure MySQL**.
+
+A continuación, se detallan los endpoints principales probados mediante Postman y documentados con Swagger UI:
+
+| **Service / Context** | **Endpoint** | **Verbo HTTP** | **Acciones Implementadas / Descripción** | **Parámetros** |
+| :--- | :--- | :--- | :--- | :--- |
+| **IAM Service** | `/api/v1/auth/login` | POST | Autenticación de usuarios y generación de tokens JWT. | Request Body (Credentials) |
+| **IAM Service** | `/api/v1/users` | GET | Listar todos los usuarios registrados en el sistema. | N/A |
+| **IAM Service** | `/api/v1/roles` | GET | Obtener la lista de roles disponibles (Student, Admin, SuperAdmin). | N/A |
+| **Booking Service** | `/api/v1/bookings` | POST | Creación de una nueva reserva de cubículo validando disponibilidad. | Request Body (BookingData) |
+| **Booking Service** | `/api/v1/bookings` | GET | Visualizar el historial de reservas realizadas por los estudiantes. | N/A |
+| **Branching Service** | `/api/v1/headquarters` | GET | Obtener la lista de todas las sedes universitarias para el mapa. | N/A |
+| **Branching Service** | `/api/v1/headquarters/{id}/cubicles` | GET | Implementación de **TS001**: Listado técnico de cubículos por sede. | headquarterId (Path) |
+| **Cubicle Service** | `/api/v1/cubicles/available` | GET | Consulta de disponibilidad en tiempo real sincronizada con sensores IoT. | N/A |
+
+[![booking-service.png](https://i.postimg.cc/x1VHyxMq/booking-service.png)](https://postimg.cc/LnvnmVyM)
+
+[![branching-service.png](https://i.postimg.cc/kgP8F1K6/branching-service.png)](https://postimg.cc/gn4nGKMm)
+
+[![iam-service.png](https://i.postimg.cc/Hk154ZX8/iam-service.png)](https://postimg.cc/ZCjCJLfJ)
+
+
 #### 5.2.2.6 Software Deployment Evidence for Sprint Review
+
+Si bien para esta entrega el proyecto aún se está adaptando a la arquitectura de microservicios, se han creado los respectivos repositorios para su posterior despliegue.
+
+[![new-repository.png](https://i.postimg.cc/zD08kVhH/new-repository.png)](https://postimg.cc/jCwpxqZR)
+
+Junto con la subida de sus archivos respectivos para cada uno de los repositorios.
+
+[![repository.png](https://i.postimg.cc/QN0hqH7W/repository.png)](https://postimg.cc/Z0BGbYVT)
+
+
+A su vez se evidencia, al menos de manera local por ahora, el funcionamiento del server discovery empleado para los microservicios.
+
+[![eureka.png](https://i.postimg.cc/L4N2VnPP/eureka.png)](https://postimg.cc/hhzkD4p4)
+
+
 #### 5.2.2.7 Team Collaboration Insights during Sprint
+
 #### 5.2.2.8 Kanban Board 
