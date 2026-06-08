@@ -1527,6 +1527,19 @@ Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/pr
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking-testing | develop | `c7b6a5z` | **test: weight sensor state updates** | Verify IoT state changes (TS007) via integration tests. | 07/06/2026 |
 
 #### 5.2.2.4 Execution Evidence for Sprint Review
+
+Para el Sprint 2 se llegaron a completar todos los endpoints requeridos del proyecto, estos funcionan en su arquitectura monolítica. No obstante durante este Sprint empezó la migración hacia una de microservicios.
+
+A continuación se mostrará la ejecución de una creación de un usuario administrador junto con su inicio de sesión desde el Swagger
+
+**Captura 1: Creación del usuario con rol de administrador**
+
+[![Swagger-auth-su.png](https://i.postimg.cc/Gmz0JfVK/Swagger-auth-su.png)](https://postimg.cc/PCLFdStv)
+
+**Captura 2: Inicio de sesión de usuario administrador con respuesta de su token**
+
+[![Swagger-auth-si.png](https://i.postimg.cc/bNjKX8j9/Swagger-auth-si.png)](https://postimg.cc/7bmB7Fh5)
+
 #### 5.2.2.5 Microservices Documentation Evidence for Sprint Review
 #### 5.2.2.6 Software Deployment Evidence for Sprint Review
 #### 5.2.2.7 Team Collaboration Insights during Sprint
