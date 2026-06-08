@@ -1584,3 +1584,9 @@ A su vez se evidencia, al menos de manera local por ahora, el funcionamiento del
 #### 5.2.2.7 Team Collaboration Insights during Sprint
 
 #### 5.2.2.8 Kanban Board 
+
+A continuación se presentará el Kanban board de nuestro proyecto, este ha sido migrado de Trello a Jira, a su vez, se han agregado y actualizado las tareas para esta entrega.
+
+[![Captura-Kanban-Av3.png](https://i.postimg.cc/Kvg5xgm1/Captura-Kanban-Av3.png)](https://postimg.cc/QHh7qC9D)
+
+Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2](https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2)
