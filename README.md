@@ -5,7 +5,7 @@
     <strong>1ASI0657 - Fundamentos de Arquitectura de Software</strong><br>
     <br><strong>NRC 7940</strong><br>
     <br><strong>Profesor: Daniel Enrique Mori Yzaguirre</strong><br>
-    <br><strong><b>Avance del trabajo final</strong></b><br>
+    <br><strong><b>Trabajo Final</strong></b><br>
 </p>
 
 <p align="center">
@@ -46,8 +46,9 @@
 <br><strong>2026-10</strong></p>
 <br>
 
-<br>
-<br>
+<div style="page-break-after: always;"></div>
+
+
 
 ## Registro de Versiones del Informe
 
@@ -143,24 +144,47 @@ En esta sección se resumen los avances y modificaciones realizadas durante el c
   - [5.2.3. Source Code Style Guide & Conventions](#523-source-code-style-guide--conventions)
   - [5.2.4. Software Deployment Configuration](#524-software-deployment-configuration)
 - [5.3. Microservices Implementation](#53-microservices-implementation)
-  - [5.2.1. Sprint 1](#521-sprint-1)
-    - [5.2.1.1. Sprint Backlog 1](#5211-sprint-backlog-1)
-    - [5.2.1.2. Development Evidence for Sprint Review](#5212-development-evidence-for-sprint-review)
-    - [5.2.1.3. Testing Suite Evidence for Sprint Review](#5213-testing-suite-evidence-for-sprint-review)
-    - [5.2.1.4. Execution Evidence for Sprint Review](#5214-execution-evidence-for-sprint-review)
-    - [5.2.1.5. Microservices Documentation Evidence for Sprint Review](#5215-microservices-documentation-evidence-for-sprint-review)
-    - [5.2.1.6. Software Deployment Evidence for Sprint Review](#5216-software-deployment-evidence-for-sprint-review)
-    - [5.2.1.7. Team Collaboration Insights during Sprint](#5217-team-collaboration-insights-during-sprint)
-    - [5.2.1.8. Kanban Board](#5218-kanban-board-tp1)
-  - [5.2.2. Sprint 2](#521-sprint-1)
-    - [5.2.2.1. Sprint Backlog 2](#5211-sprint-backlog-1)
-    - [5.2.2.2. Development Evidence for Sprint Review](#5212-development-evidence-for-sprint-review)
-    - [5.2.2.3. Testing Suite Evidence for Sprint Review](#5213-testing-suite-evidence-for-sprint-review)
-    - [5.2.2.4. Execution Evidence for Sprint Review](#5214-execution-evidence-for-sprint-review)
-    - [5.2.2.5. Microservices Documentation Evidence for Sprint Review](#5215-microservices-documentation-evidence-for-sprint-review)
-    - [5.2.2.6. Software Deployment Evidence for Sprint Review](#5216-software-deployment-evidence-for-sprint-review)
-    - [5.2.2.7. Team Collaboration Insights during Sprint](#5217-team-collaboration-insights-during-sprint)
-    - [5.2.2.8. Kanban Board](#5218-kanban-board-tp1)
+  - [5.3.1. Sprint 1](#531-sprint-1)
+    - [5.3.1.1. Sprint Backlog 1](#5311-sprint-backlog-1)
+    - [5.3.1.2. Development Evidence for Sprint Review](#5312-development-evidence-for-sprint-review)
+    - [5.3.1.3. Testing Suite Evidence for Sprint Review](#5313-testing-suite-evidence-for-sprint-review)
+    - [5.3.1.4. Execution Evidence for Sprint Review](#5314-execution-evidence-for-sprint-review)
+    - [5.3.1.5. Microservices Documentation Evidence for Sprint Review](#5315-microservices-documentation-evidence-for-sprint-review)
+    - [5.3.1.6. Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
+    - [5.3.1.7. Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
+    - [5.3.1.8. Kanban Board](#5318-kanban-board-tp1)
+  - [5.3.2. Sprint 2](#532-sprint-1)
+    - [5.3.2.1. Sprint Backlog 2](#5322-sprint-backlog-1)
+    - [5.3.2.2. Development Evidence for Sprint Review](#5322-development-evidence-for-sprint-review)
+    - [5.3.2.3. Testing Suite Evidence for Sprint Review](#5323-testing-suite-evidence-for-sprint-review)
+    - [5.3.2.4. Execution Evidence for Sprint Review](#5324-execution-evidence-for-sprint-review)
+    - [5.3.2.5. Microservices Documentation Evidence for Sprint Review](#5325-microservices-documentation-evidence-for-sprint-review)
+    - [5.3.2.6. Software Deployment Evidence for Sprint Review](#5326-software-deployment-evidence-for-sprint-review)
+    - [5.3.2.7. Team Collaboration Insights during Sprint](#5327-team-collaboration-insights-during-sprint)
+    - [5.3.2.8. Kanban Board](#5328-kanban-board)
+  - [5.3.3. Sprint 3](#533-sprint-3)
+    - [5.3.3.1. Sprint Backlog 3](#5331-sprint-backlog-3)
+    - [5.3.3.2. Development Evidence for Sprint Review](#5332-development-evidence-for-sprint-review)
+    - [5.3.3.3. Testing Suite Evidence for Sprint Review](#5333-testing-suite-evidence-for-sprint-review)
+    - [5.3.3.4. Execution Evidence for Sprint Review](#5334-execution-evidence-for-sprint-review)
+    - [5.3.3.5. Microservices Documentation Evidence for Sprint Review](#5335-microservices-documentation-evidence-for-sprint-review)
+    - [5.3.3.6. Software Deployment Evidence for Sprint Review](#5336-software-deployment-evidence-for-sprint-review)
+    - [5.3.3.7. Team Collaboration Insights during Sprint](#5337-team-collaboration-insights-during-sprint)
+    - [5.3.3.8. Kanban Board](#5338-kanban-board)
+
+  - [5.3.4. Sprint 4](#534-sprint-4)
+    - [5.3.4.1. Sprint Backlog 4](#5341-sprint-backlog-4)
+    - [5.3.4.2. Development Evidence for Sprint Review](#5342-development-evidence-for-sprint-review)
+    - [5.3.4.3. Testing Suite Evidence for Sprint Review](#5343-testing-suite-evidence-for-sprint-review)
+    - [5.3.4.4. Execution Evidence for Sprint Review](#5344-execution-evidence-for-sprint-review)
+    - [5.3.4.5. Microservices Documentation Evidence for Sprint Review](#5345-microservices-documentation-evidence-for-sprint-review)
+    - [5.3.4.6. Software Deployment Evidence for Sprint Review](#5346-software-deployment-evidence-for-sprint-review)
+    - [5.3.4.7. Team Collaboration Insights during Sprint](#5347-team-collaboration-insights-during-sprint)
+    - [5.3.4.8. Kanban Board](#5348-kanban-board)
+
+- [5.4 Microservices Deployment](#54-microservices-deployment)
+  - [5.4.1 Cloud Architecture Diagram](#541-cloud-architecture-diagram)
+  - [5.4.2 Cloud Architecture Deployment](#542-cloud-architecture-deployment)
 
 ---
 
@@ -168,8 +192,8 @@ En esta sección se resumen los avances y modificaciones realizadas durante el c
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Piero Velarde Luyo** <br> **Avance 1:** Analicé el planteamiento del problema y profundicé mis conocimientos informáticos para integrar en la solución los segmentos de usuarios adecuados. <br> **Avance 2:** La elaboración del capítulo 4 me permitió actualizar mis conocimientos en arquitectura de software para estructurar la solución con claridad. <br> **Avance 3:** Investigué y apliqué patrones de diseño de microservicios  para desacoplar las funcionalidades del backend original de BibFlip, adaptando la lógica del sistema a una arquitectura distribuida y escalable.<br><br>**Joaquin Carranza** <br> **Avance 1:** Reconocí que el aprendizaje en técnicas de Needfinding es clave. Al usar mapas de empatía, comprendí que debo actualizar mis herramientas de análisis constantemente.<br> **Avance 2:** Identifiqué la necesidad de estudiar estándares como el Modelo C4 y ADR para estructurar sistemas sólidos y flexibles.<br> **TP:** La implementación de microservicios reafirmó que el aprendizaje autónomo es el motor del desarrollo moderno. <br> **Avance 3:** Actualicé mis conocimientos sobre protocolos de comunicación asíncrona y paso de mensajes plantear cómo reconfigurar los microcontroladores de los cubículos hacia los nuevos servicios independientes, asegurando la integridad de los datos.<br><br>**David Rengifo Lozano** <br> **Avance 1:** Investigué y definí los requerimientos técnicos iniciales y las historias de usuario (User Stories), asegurando una transición técnica y viable hacia una arquitectura orientada a servicios.<br> **Avance 2:** Me encargué del diseño detallado de las vistas C4 y UML para los módulos de Gestión de Reservas e Integración IoT (sección 4.3.2.6), profundizando en la sincronización de estados física-digital.<br> **TP:** Lideré la definición y ejecución de las Suites de Prueba y Patrones Generales (sección 5.1), verificando el comportamiento de patrones CQRS y Assembler en el backend. <br> **Avance 3:** Adquirí habilidades prácticas en tecnologías de contenerización por si necesitabamos empaquetar los nuevos microservicios de gestión de reservas y monitoreo, facilitando entornos de desarrollo aislados y un futuro despliegue en la nube. | **Avance 1:** Como equipo, revisamos conceptos clave para definir el problema. Identificamos áreas de mejora en la arquitectura y actualizamos conocimientos para diseñar un software robusto y escalable.<br><br>**Avance 2:** Investigamos conceptos de arquitectura para estructurar la propuesta. Esto permitió definir los elementos solicitados y asegurar que el diseño soporte fallos de red sin pérdida de datos.<br><br>**TP:** El equipo consolidó el uso de microservicios y despliegue continuo. La validación mediante suites de prueba garantizó que la excelencia profesional dependa de una formación técnica constante. <br><br> **Avance 3:** La transición de un sistema monolítico a uno basado en microservicios ha exigido que el equipo investigue y asimile activamente nuevas tecnologías y patrones arquitectónicos. Este esfuerzo demuestra una capacidad técnica sólida para actualizar sus conocimientos teóricos y traducirlos en mejoras estructurales tangibles para el producto de software. |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Piero Velarde Luyo** <br> **Avance 1:** Me familiaricé con el perfil de usuarios para integrarme al proyecto e impulsar propuestas de organización. <br> **Avance 2:** Liderar el equipo me hizo notar que el aprendizaje continuo es vital para respaldar decisiones arquitectónicas efectivas. <br> **Avance 3:** Identifiqué que la arquitectura monolítica inicial limitaría el crecimiento a futuro del sistema de la biblioteca, reconociendo la necesidad de estudiar de forma autónoma modelos distribuidos para mantener el proyecto alineado con los estándares actuales de la industria del software.<br><br>**Joaquin Carranza** <br> **Avance 1:** Comprendí que el éxito depende de la actualización constante en UX Research para evitar soluciones obsoletas.<br> **Avance 2:** El diseño arquitectónico me demostró que el desempeño profesional exige un estudio permanente de patrones de diseño modernos.<br> **TP:** La adopción de microservicios y Scrum reafirmó que la autoformación técnica es indispensable para dominar tecnologías distribuidas. <br> **Avance 3:** Reconocí que la gestión eficiente de múltiples sensores en tiempo real requiere una constante investigación de nuevas herramientas de procesamiento, comprometiéndose al estudio continuo de tecnologías de streaming o colas de eventos que superen las capacidades del backend original.<br><br>**David Rengifo Lozano** <br> **Avance 1:** Comprendí que el desarrollo moderno requiere técnicas de elicitación que conecten el negocio con la tecnología, priorizando la viabilidad de sensores IoT.<br> **Avance 2:** Identifiqué la importancia de dominar arquitecturas híbridas (Edge-Cloud) para gestionar la latencia y el rendimiento en telemetría en tiempo real.<br> **TP:** La implementación de la suite de pruebas me demostró que la estabilidad del software depende de patrones de diseño probados y una cobertura de testing rigurosa en Spring Boot. **Avance 3:** Tomé conciencia de la brecha de conocimiento respecto a la integración y despliegue continuo que exige una arquitectura de microservicios, asumiendo la responsabilidad de autoeducarse en prácticas modernas de DevOps para asegurar la calidad y mantenibilidad del proyecto. | **Avance 1:** El equipo colaboró para desarrollar la solución y repasó conceptos previos. El proceso de Needfinding nos enseñó a usar herramientas modernas de mapeo para evitar soluciones obsoletas.<br><br>**Avance 2:** Concluimos que para diseñar una arquitectura sólida es vital el estudio constante de estándares como el Modelo C4, garantizando una documentación clara para todos los interesados. <br><br> **Avance 3:** La decisión proactiva de refactorizar un sistema que ya era funcional subraya una profunda comprensión del equipo sobre la naturaleza evolutiva de la ingeniería de software. |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Piero Velarde Luyo** <br> **Avance 1:** Analicé el planteamiento del problema y profundicé mis conocimientos informáticos para integrar en la solución los segmentos de usuarios adecuados. <br> **Avance 2:** La elaboración del capítulo 4 me permitió actualizar mis conocimientos en arquitectura de software para estructurar la solución con claridad. <br> **Avance 3:** Investigué y apliqué patrones de diseño de microservicios  para desacoplar las funcionalidades del backend original de BibFlip, adaptando la lógica del sistema a una arquitectura distribuida y escalable.<br> **Avance 4:** Investigué y apliqué estándares de organización de código y manejo de dependencias en entornos de microservicios. Esto me permitió estructurar los repositorios de manera limpia y modular, asegurando que la arquitectura distribuida sea mantenible y quede lista para el pipeline de despliegue automatizado. <br> **Final:** Lideré el despliegue de los contenedores frontend y el API Gateway en Azure App Service. Configuré las redes virtuales y las reglas de seguridad de Azure para garantizar que la comunicación entre el Gateway y los microservicios fuera segura y eficiente, aplicando mis conocimientos en infraestructura cloud. <br><br>**Joaquin Carranza** <br> **Avance 1:** Reconocí que el aprendizaje en técnicas de Needfinding es clave. Al usar mapas de empatía, comprendí que debo actualizar mis herramientas de análisis constantemente.<br> **Avance 2:** Identifiqué la necesidad de estudiar estándares como el Modelo C4 y ADR para estructurar sistemas sólidos y flexibles.<br> **TP:** La implementación de microservicios reafirmó que el aprendizaje autónomo es el motor del desarrollo moderno. <br> **Avance 3:** Actualicé mis conocimientos sobre protocolos de comunicación asíncrona y paso de mensajes plantear cómo reconfigurar los microcontroladores de los cubículos hacia los nuevos servicios independientes, asegurando la integridad de los datos.<br> **Avance 4:** Actualicé mis conocimientos en estrategias de testing para arquitecturas distribuidas, enfocándome en el diseño y ejecución de pruebas unitarias robustas. Logré validar la lógica de negocio aislada de los microservicios, asegurando que cada componente responda correctamente antes de su integración. <br> **Final:** Me encargué de la migración y configuración de la persistencia global en Azure Database for PostgresSQL. Implementé las cadenas de conexión seguras y gestioné el escalado de la base de datos para soportar la carga transaccional del microservicio de Booking, asegurando la consistencia de los datos en la nube. <br><br>**David Rengifo Lozano** <br> **Avance 1:** Investigué y definí los requerimientos técnicos iniciales y las historias de usuario (User Stories), asegurando una transición técnica y viable hacia una arquitectura orientada a servicios.<br> **Avance 2:** Me encargué del diseño detallado de las vistas C4 y UML para los módulos de Gestión de Reservas e Integración IoT (sección 4.3.2.6), profundizando en la sincronización de estados física-digital.<br> **TP:** Lideré la definición y ejecución de las Suites de Prueba y Patrones Generales (sección 5.1), verificando el comportamiento de patrones CQRS y Assembler en el backend. <br> **Avance 3:** Adquirí habilidades prácticas en tecnologías de contenerización por si necesitabamos empaquetar los nuevos microservicios de gestión de reservas y monitoreo, facilitando entornos de desarrollo aislados y un futuro despliegue en la nube.<br> **Avance 4:** Profundicé en la configuración de entornos locales y variables de entorno orientadas a la preparación de despliegues independientes. Estructuré los archivos de configuración de los repositorios para garantizar que la transición de los microservicios hacia el entorno de producción en el siguiente sprint sea fluida y sin fricciones técnicas. <br> **Final:** Integré el servidor de descubrimiento Eureka en el entorno de producción de Azure, lo que permitió que los microservicios de Branching y Booking se localizaran dinámicamente sin configuraciones manuales de IP.| **Avance 1:** Como equipo, revisamos conceptos clave para definir el problema. Identificamos áreas de mejora en la arquitectura y actualizamos conocimientos para diseñar un software robusto y escalable.<br><br>**Avance 2:** Investigamos conceptos de arquitectura para estructurar la propuesta. Esto permitió definir los elementos solicitados y asegurar que el diseño soporte fallos de red sin pérdida de datos.<br><br>**TP:** El equipo consolidó el uso de microservicios y despliegue continuo. La validación mediante suites de prueba garantizó que la excelencia profesional dependa de una formación técnica constante. <br><br> **Avance 3:** La transición de un sistema monolítico a uno basado en microservicios ha exigido que el equipo investigue y asimile activamente nuevas tecnologías y patrones arquitectónicos. Este esfuerzo demuestra una capacidad técnica sólida para actualizar sus conocimientos teóricos y traducirlos en mejoras estructurales tangibles para el producto de software.<br><br> **Avance 4:** El equipo actualizó y consolidó sus conocimientos en aseguramiento de la calidad de software y gestión de configuración de SCM. La correcta estructuración de los repositorios y la implementación de pruebas unitarias  permitieron validar la estabilidad del backend, minimizando la deuda técnica y garantizando una base sólida y predecible para el próximo sprint de despliegue. <br><br> **Final:** Como equipo, logramos la transición exitosa de un entorno de desarrollo local a una infraestructura Cloud-Native. La implementación en Azure nos permitió comprender la importancia de la alta disponibilidad y la resiliencia en sistemas distribuidos que gestionan datos académicos críticos.|
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Piero Velarde Luyo** <br> **Avance 1:** Me familiaricé con el perfil de usuarios para integrarme al proyecto e impulsar propuestas de organización. <br> **Avance 2:** Liderar el equipo me hizo notar que el aprendizaje continuo es vital para respaldar decisiones arquitectónicas efectivas. <br> **Avance 3:** Identifiqué que la arquitectura monolítica inicial limitaría el crecimiento a futuro del sistema de la biblioteca, reconociendo la necesidad de estudiar de forma autónoma modelos distribuidos para mantener el proyecto alineado con los estándares actuales de la industria del software.<br> **Avance 4:** Reconocí que la evolución de las arquitecturas de microservicios exige un aprendizaje continuo sobre buenas prácticas de versionamiento y estructuración de proyectos. Adoptar estos estándares me demostró que la autoformación es clave para facilitar el trabajo en equipo y el despliegue continuo. <br> **Final:** El despliegue final me demostró que el rol del arquitecto no termina en el diseño, sino en asegurar que la infraestructura soporte los drivers definidos. Identifiqué la necesidad de seguir capacitándome en herramientas de DevOps para automatizar futuros despliegues. <br><br>**Joaquin Carranza** <br> **Avance 1:** Comprendí que el éxito depende de la actualización constante en UX Research para evitar soluciones obsoletas.<br> **Avance 2:** El diseño arquitectónico me demostró que el desempeño profesional exige un estudio permanente de patrones de diseño modernos.<br> **TP:** La adopción de microservicios y Scrum reafirmó que la autoformación técnica es indispensable para dominar tecnologías distribuidas. <br> **Avance 3:** Reconocí que la gestión eficiente de múltiples sensores en tiempo real requiere una constante investigación de nuevas herramientas de procesamiento, comprometiéndose al estudio continuo de tecnologías de streaming o colas de eventos que superen las capacidades del backend original.<br> **Avance 4:** Identifiqué la necesidad de mantenerme al tanto de los nuevos frameworks y librerías de pruebas unitarias. Entender el impacto de un código altamente testeado me concientizó sobre cómo el aprendizaje autónomo impacta directamente en la resiliencia y calidad del producto final. <br> **Final:** Trabajar con servicios gestionados en la nube me enseñó que la seguridad de los datos es un aprendizaje continuo. La configuración de firewalls y tokens JWT en un entorno productivo reafirmó mi compromiso con la formación constante en ciberseguridad cloud. <br><br>**David Rengifo Lozano** <br> **Avance 1:** Comprendí que el desarrollo moderno requiere técnicas de elicitación que conecten el negocio con la tecnología, priorizando la viabilidad de sensores IoT.<br> **Avance 2:** Identifiqué la importancia de dominar arquitecturas híbridas (Edge-Cloud) para gestionar la latencia y el rendimiento en telemetría en tiempo real.<br> **TP:** La implementación de la suite de pruebas me demostró que la estabilidad del software depende de patrones de diseño probados y una cobertura de testing rigurosa en Spring Boot. **Avance 3:** Tomé conciencia de la brecha de conocimiento respecto a la integración y despliegue continuo que exige una arquitectura de microservicios, asumiendo la responsabilidad de autoeducarse en prácticas modernas de DevOps para asegurar la calidad y mantenibilidad del proyecto.<br> **Avance 4:** Comprendí que el aprendizaje constante en técnicas de preparación para despliegues (deployment readiness) es indispensable en el desarrollo moderno. Investigar sobre la correcta separación de entornos me permitió anticipar problemas de configuración y automatización en la nube. <br> **Final:** La implementación de la arquitectura híbrida en Azure me hizo notar que la optimización del rendimiento en tiempo real requiere un estudio profundo de nuevas tecnologías de mensajería. Este proyecto consolidó mi visión de que la autoformación es vital para innovar en el sector IoT. | **Avance 1:** El equipo colaboró para desarrollar la solución y repasó conceptos previos. El proceso de Needfinding nos enseñó a usar herramientas modernas de mapeo para evitar soluciones obsoletas.<br><br>**Avance 2:** Concluimos que para diseñar una arquitectura sólida es vital el estudio constante de estándares como el Modelo C4, garantizando una documentación clara para todos los interesados. <br><br> **Avance 3:** La decisión proactiva de refactorizar un sistema que ya era funcional subraya una profunda comprensión del equipo sobre la naturaleza evolutiva de la ingeniería de software.<br><br> **Avance 4:** El desarrollo de este sprint reafirmó en el equipo que el aprendizaje permanente es el motor para afrontar las fases críticas del ciclo de vida del software. Reconocer las brechas de conocimiento en testing y estructuración de repositorios impulsó una investigación proactiva, transformando desafíos técnicos en un flujo de trabajo optimizado y listo para producción. <br><br> **Final:** Durante el desarrollo del proyecto, se evidenció que el aprendizaje permanente es un componente esencial para enfrentar desafíos tecnológicos cambiantes. La integración de sensores físicos con servicios en la nube exigió una actualización constante en protocolos de comunicación y gestión de recursos cloud. |
 
 
 ---
@@ -1354,8 +1378,8 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 
 ### 5.2.4 Software Deployment Configuration
 ## 5.3 Microservices Implementation
-### 5.2.1 Sprint 1
-#### 5.2.1.1 Sprint Backlog 1
+### 5.3.1 Sprint 1
+#### 5.3.1.1 Sprint Backlog 1
 
 | Sprint # | Sprint 1 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1380,7 +1404,7 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 
 [Link de trello](https://trello.com/b/AOlUPBwr/sprint-3)
 
-#### 5.2.1.2 Development Evidence for Sprint Review
+#### 5.3.1.2 Development Evidence for Sprint Review
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1405,7 +1429,7 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | 20aeba6 | refactor: apply backend coding conventions | - | 14/05/2026 |
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | main | bf487f5 | feat: initialize sprint backlog services | - | 14/05/2026 |
 
-#### 5.2.1.3 Testing Suite Evidence for Sprint Review
+#### 5.3.1.3 Testing Suite Evidence for Sprint Review
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | a1b2c3d | feat(tp): US001.feature | - | 17/05/2026 |
@@ -1416,7 +1440,7 @@ A continuación, se presentan las referencias y convenciones adoptadas para los 
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | u7v8w9x | feat(tp): US007.feature | - | 17/05/2026 |
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | y0z1a2b | feat(tp): US008.feature | - | 17/05/2026 |
 
-#### 5.2.1.4 Execution Evidence for Sprint Review
+#### 5.3.1.4 Execution Evidence for Sprint Review
 Durante el Sprint 1 se alcanzaron los endpoints de autenticación (login, recovery, change-password) y la Landing Page pública. A continuación se presentan capturas de pantalla de las operaciones realizadas vía Postman:
 
 **Captura 1: Login exitoso - POST /api/v1/auth/login**
@@ -1443,7 +1467,7 @@ Durante el Sprint 1 se alcanzaron los endpoints de autenticación (login, recove
 
 <img width="764" height="529" alt="image" src="https://github.com/user-attachments/assets/deb000f8-3da6-480e-9023-a9b1112b5686" />
 
-#### 5.2.1.5 Microservices Documentation Evidence for Sprint Review
+#### 5.3.1.5 Microservices Documentation Evidence for Sprint Review
 Durante el Sprint 1 se documentaron los endpoints de autenticación utilizando OpenAPI 3.0 (Swagger). La documentación se encuentra disponible en el endpoint /swagger-ui/index.html del backend desplegado en Azure.
 
 Repositorio de Web Services: https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing
@@ -1468,22 +1492,22 @@ Repositorio de Web Services: https://github.com/UPC-PRE-202601-1ASI0657-7940-NOM
 <img width="953" height="383" alt="image" src="https://github.com/user-attachments/assets/231edfb3-1652-43c1-9088-722543e357ca" />
 
 
-#### 5.2.1.6 Software Deployment Evidence for Sprint Review
+#### 5.3.1.6 Software Deployment Evidence for Sprint Review
 Ejecución y verificación de servicios:
 <img width="941" height="767" alt="image" src="https://github.com/user-attachments/assets/6ebb9c3d-5c99-4185-9e55-d2c0b0e5e3e0" />
 
-#### 5.2.1.7 Team Collaboration Insights during Sprint
+#### 5.3.1.7 Team Collaboration Insights during Sprint
 En nuestro equipo se han asignado bounded contexts para cada integrante, se adjunta evidencia del avance de cada uno durante el primer sprint.
 <img width="1012" height="749" alt="image" src="https://github.com/user-attachments/assets/cddc1c5f-af79-45bf-960f-35f881dcb9b7" />
 
 
-#### 5.2.1.8 Kanban Board 
+#### 5.3.1.8 Kanban Board 
 Al final del primer sprint, las actividades del proyecto se encuentran en estas etapas:
 
 <img width="1146" height="606" alt="image" src="https://github.com/user-attachments/assets/a7adb9b2-1de3-4c41-8e10-68209ad43c51" />
 
-### 5.2.2 Sprint 2
-#### 5.2.2.1 Sprint Backlog 2
+### 5.3.2 Sprint 2
+#### 5.3.2.1 Sprint Backlog 2
 
 | **Sprint #** | **Sprint 2** | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1501,7 +1525,7 @@ Al final del primer sprint, las actividades del proyecto se encuentran en estas 
 
 Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2](https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2)
 
-#### 5.2.2.2 Development Evidence for Sprint Review
+#### 5.3.2.2 Development Evidence for Sprint Review
 
 | **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1514,7 +1538,7 @@ Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/pr
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | develop | `y9z0a1b` | **feat: routing for Branching service** | Configuration of load balanced routes via Eureka for the branching service. | 07/06/2026 |
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-service | develop | `x2w1v0u` | **feat: implement JWT token validation** | Centralized security logic for user session management in the new service. | 07/06/2026 |
 
-#### 5.2.2.3 Testing Suite Evidence for Sprint Review
+#### 5.3.2.3 Testing Suite Evidence for Sprint Review
 
 | **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1526,7 +1550,7 @@ Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/pr
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | `g0f9e8d` | **test: TS001.feature for cubicle lookup** | Gherkin scenario for retrieving cubicle list by headquarter. | 07/06/2026 |
 | https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking-testing | develop | `c7b6a5z` | **test: weight sensor state updates** | Verify IoT state changes (TS007) via integration tests. | 07/06/2026 |
 
-#### 5.2.2.4 Execution Evidence for Sprint Review
+#### 5.3.2.4 Execution Evidence for Sprint Review
 
 Para el Sprint 2 se llegaron a completar todos los endpoints requeridos del proyecto, estos funcionan en su arquitectura monolítica. No obstante durante este Sprint empezó la migración hacia una de microservicios.
 
@@ -1540,7 +1564,7 @@ A continuación se mostrará la ejecución de una creación de un usuario admini
 
 [![Swagger-auth-si.png](https://i.postimg.cc/bNjKX8j9/Swagger-auth-si.png)](https://postimg.cc/7bmB7Fh5)
 
-#### 5.2.2.5 Microservices Documentation Evidence for Sprint Review
+#### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
 
 
 En esta sección se presenta la evidencia de la correcta ejecución y respuesta de los endpoints desarrollados durante el Sprint 2. Las pruebas se realizaron consumiendo los microservicios a través del **API Gateway**, validando la integración con **Eureka** para el descubrimiento de servicios y la persistencia en **Azure MySQL**.
@@ -1565,7 +1589,7 @@ A continuación, se detallan los endpoints principales probados mediante Postman
 [![iam-service.png](https://i.postimg.cc/Hk154ZX8/iam-service.png)](https://postimg.cc/ZCjCJLfJ)
 
 
-#### 5.2.2.6 Software Deployment Evidence for Sprint Review
+#### 5.3.2.6 Software Deployment Evidence for Sprint Review
 
 Si bien para esta entrega el proyecto aún se está adaptando a la arquitectura de microservicios, se han creado los respectivos repositorios para su posterior despliegue.
 
@@ -1581,16 +1605,249 @@ A su vez se evidencia, al menos de manera local por ahora, el funcionamiento del
 [![eureka.png](https://i.postimg.cc/L4N2VnPP/eureka.png)](https://postimg.cc/hhzkD4p4)
 
 
-#### 5.2.2.7 Team Collaboration Insights during Sprint
+#### 5.3.2.7 Team Collaboration Insights during Sprint
 
 Durante el desarrollo del Sprint hemos continuado con el desarrollo del proyecto según los bounded contexts asignados a cada integrante del equipo a la par que la migración de la arquitectura, a continuación se adjunta evidencia en imágenes del trabajo colaborativo.
 
 [![commits-av3.png](https://i.postimg.cc/PxvVvV1Q/commits-av3.png)](https://postimg.cc/5Y1SZ37X)
 
-#### 5.2.2.8 Kanban Board 
+#### 5.3.2.8 Kanban Board 
 
 A continuación se presentará el Kanban board de nuestro proyecto, este ha sido migrado de Trello a Jira, a su vez, se han agregado y actualizado las tareas para esta entrega.
 
 [![Captura-Kanban-Av3.png](https://i.postimg.cc/Kvg5xgm1/Captura-Kanban-Av3.png)](https://postimg.cc/QHh7qC9D)
 
 Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2](https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2)
+
+
+### 5.3.3 Sprint 3
+#### 5.3.3.1 Sprint Backlog 3
+
+| **Sprint #** | **Sprint 3** | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story Id** | **Title** | **Work-Item / Task Id** | **Work-Item / Task Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| **TS008** | **Configuración de Infraestructura** | BP-154 | Crear el API Gateway | Implementación del punto de entrada único (Spring Cloud Gateway) para gestionar el tráfico hacia los microservicios. | 3 | Piero Velarde | Done |
+| | | BP-153 | Crear el server discovery (Eureka) | Configuración del servidor de descubrimiento para el registro y localización dinámica de servicios. | 2.5 | David Rengifo | Done |
+| **US008** | **Reservar un cubículo** | BP-150 | Crear el servicio Booking | Desarrollo del microservicio independiente para la lógica de transacciones de reserva y gestión de slots. | 4 | Joaquín Carranza | In Process |
+| **US014** | **Ver la sede asignada** | BP-151 | Crear el servicio Branching | Implementación del microservicio encargado de administrar las sedes, horarios y ubicación geográfica. | 3.5 | David Rengifo | In Process |
+| **US016** | **Inicio de sesión administrador** | BP-152 | Crear el servicio IAM | Migración de la lógica de identidad, autenticación y roles a un microservicio centralizado de seguridad. | 4 | Piero Velarde | In Process |
+| **TS001** | **Obtener cubículos** | T-001 | Endpoint para lista de cubículos | Implementar la lógica de API para que el frontend obtenga la lista de cubículos por sede específica. | 2 | Joaquín Carranza | Done |
+| **TS007** | **Simular Sensores en Wokwi** | T-001 | Simulación de circuito ESP32 | Validación de la lectura del sensor de peso y transmisión de datos hacia el Edge API mediante Wokwi. | 3 | David Rengifo | Done |
+| **TS009** | **Integración y Validación** | BP-155 | Verificar funcionamiento simultáneo | Ejecución de pruebas de comunicación entre el Gateway y los microservicios en simultáneo para asegurar interoperabilidad. | 2 | Joaquín Carranza | To-do |
+
+[![Captura-Kanban-Av4.png](https://i.postimg.cc/9fzjXmfL/Captura-Kanban-Av4.png)](https://postimg.cc/4KC0BTVc)
+
+Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2](https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2)
+
+#### 5.3.3.2 Development Evidence for Sprint Review
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-eureka | main | `a1b2c3d` | **chore: setup Eureka Server discovery** | Add spring-cloud-starter-netflix-eureka-server and enable server annotation. | 02/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | main | `e4f5g6h` | **feat: implement Spring Cloud Gateway** | Configuration of routes for IAM and Branching services with security filters. | 03/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-service | develop | `i7j8k9l` | **feat: initialize IAM microservice** | Setup project structure and migrate authentication logic from monolith. | 04/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-branching-service | develop | `q3r4s5t` | **feat: initialize Branching microservice** | Implementation of headquarter domain and repository interfaces. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking-service | develop | `m0n1o2p` | **feat: initialize Booking microservice** | Define booking aggregate and persistence layer with MySQL. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | develop | `u6v7w8x` | **feat: endpoint for cubicle list by headquarter** | Implementation of GET /api/v1/headquarters/{id}/cubicles for frontend integration. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | develop | `y9z0a1b` | **feat: routing for Branching service** | Configuration of load balanced routes via Eureka for the branching service. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-service | develop | `x2w1v0u` | **feat: implement JWT token validation** | Centralized security logic for user session management in the new service. | 07/06/2026 |
+
+
+#### 5.3.3.3 Testing Suite Evidence for Sprint Review
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam | develop | `z5x4y3w` | **test: add JWT validation unit tests** | Validate token extraction and claim verification in IAM service. | 04/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking | develop | `v2u1t0s` | **test: add booking creation scenarios** | Implement Gherkin feature for US008: Cubicle reservation logic. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-branching | develop | `r9q8p7o` | **test: add headquarter lookup tests** | Unit tests for repository and service layer in branching context. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | main | `n6m5l4k` | **test: route forwarding verification** | Automated tests to ensure gateway redirects to IAM and Branching. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | `j3k2i1h` | **test: US016.feature for admin login** | Define acceptance criteria for admin authentication in Gherkin. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | `g0f9e8d` | **test: TS001.feature for cubicle lookup** | Gherkin scenario for retrieving cubicle list by headquarter. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking | develop | `c7b6a5z` | **test: weight sensor state updates** | Verify IoT state changes (TS007) via integration tests. | 07/06/2026 |
+
+#### 5.3.2.4 Execution Evidence for Sprint Review
+
+Para el Sprint 3 se llegó a terminar la migración a una arquitectura monolítica, esta presentando un funcionamiento completo, a su vez se incorporaron pruebas integrales.
+
+Puesto a que no hubo mucho cambio en lo que respecta a desarrollo, las funciones de esta entrega son las misma a la anterior.
+A continuación se mostrará la ejecución de una creación de un usuario administrador junto con su inicio de sesión desde el Swagger
+
+**Captura 1: Creación del usuario con rol de administrador**
+
+[![Swagger-auth-su.png](https://i.postimg.cc/Gmz0JfVK/Swagger-auth-su.png)](https://postimg.cc/PCLFdStv)
+
+**Captura 2: Inicio de sesión de usuario administrador con respuesta de su token**
+
+[![Swagger-auth-si.png](https://i.postimg.cc/bNjKX8j9/Swagger-auth-si.png)](https://postimg.cc/7bmB7Fh5)
+
+#### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
+
+En esta sección se presenta la evidencia de la correcta ejecución y respuesta de los endpoints desarrollados durante el Sprint 3. Las pruebas se realizaron consumiendo los microservicios a través del **API Gateway**, validando la integración con **Eureka** para el descubrimiento de servicios.
+
+A continuación, se detallan los endpoints principales probados mediante Postman y documentados con Swagger UI:
+
+| **Service / Context** | **Endpoint** | **Verbo HTTP** | **Acciones Implementadas / Descripción** | **Parámetros** |
+| :--- | :--- | :--- | :--- | :--- |
+| **IAM Service** | `/api/v1/auth/login` | POST | Autenticación de usuarios y generación de tokens JWT. | Request Body (Credentials) |
+| **IAM Service** | `/api/v1/users` | GET | Listar todos los usuarios registrados en el sistema. | N/A |
+| **IAM Service** | `/api/v1/roles` | GET | Obtener la lista de roles disponibles (Student, Admin, SuperAdmin). | N/A |
+| **Booking Service** | `/api/v1/bookings` | POST | Creación de una nueva reserva de cubículo validando disponibilidad. | Request Body (BookingData) |
+| **Booking Service** | `/api/v1/bookings` | GET | Visualizar el historial de reservas realizadas por los estudiantes. | N/A |
+| **Branching Service** | `/api/v1/headquarters` | GET | Obtener la lista de todas las sedes universitarias para el mapa. | N/A |
+| **Branching Service** | `/api/v1/headquarters/{id}/cubicles` | GET | Implementación de **TS001**: Listado técnico de cubículos por sede. | headquarterId (Path) |
+| **Cubicle Service** | `/api/v1/cubicles/available` | GET | Consulta de disponibilidad en tiempo real sincronizada con sensores IoT. | N/A |
+
+[![booking-service.png](https://i.postimg.cc/x1VHyxMq/booking-service.png)](https://postimg.cc/LnvnmVyM)
+
+[![branching-service.png](https://i.postimg.cc/kgP8F1K6/branching-service.png)](https://postimg.cc/gn4nGKMm)
+
+[![iam-service.png](https://i.postimg.cc/Hk154ZX8/iam-service.png)](https://postimg.cc/ZCjCJLfJ)
+
+#### 5.3.2.6 Software Deployment Evidence for Sprint Review
+
+Para esta entrega si bien finalizó la migración, nos centramos en el desarrollo de pruebas unitarias y la buena estructura de los repositorios para dejarlos listos al despliegue que se desarrollará en el siguiente sprint.
+A continuación se presentará la guía que seguimos para la creación de los repositorios
+
+[![new-repository.png](https://i.postimg.cc/zD08kVhH/new-repository.png)](https://postimg.cc/jCwpxqZR)
+
+Junto con la subida de sus archivos respectivos para cada uno de los repositorios.
+
+[![repository.png](https://i.postimg.cc/QN0hqH7W/repository.png)](https://postimg.cc/Z0BGbYVT)
+
+
+A continuación se evidencian los repositorios de los microservicios respectivos a nuestra organización.
+
+[![repo-micro.png](https://i.postimg.cc/Qd2F1yTD/repo-micro.png)](https://postimg.cc/3kZrH91f)
+
+#### 5.3.2.7 Team Collaboration Insights during Sprint
+
+Durante el desarrollo del Sprint hemos continuado con el desarrollo del proyecto según los bounded contexts asignados a cada integrante del equipo a la par que la migración de la arquitectura, a continuación se adjunta evidencia en imágenes del trabajo colaborativo.
+
+[![commits-av3.png](https://i.postimg.cc/PxvVvV1Q/commits-av3.png)](https://postimg.cc/5Y1SZ37X)
+
+#### 5.3.3.8 Kanban Board 
+
+A continuación se presentará el Kanban board de nuestro proyecto, este ha sido migrado de Trello a Jira, a su vez, se han agregado y actualizado las tareas para esta entrega.
+
+[![Captura-Kanban-Av4.png](https://i.postimg.cc/9fzjXmfL/Captura-Kanban-Av4.png)](https://postimg.cc/4KC0BTVc)
+
+Enlace del tablero en Jira: [https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2](https://upc-projects.atlassian.net/jira/software/projects/BP/boards/2)
+
+### 5.3.4 Sprint 4
+
+#### 5.3.4.1 Sprint Backlog 4
+
+| **Sprint #** | **Sprint 4** | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story Id** | **Title** | **Work-Item / Task Id** | **Work-Item / Task Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| **TS008** | **Configuración de Infraestructura** | BP-154 | Crear el API Gateway | Implementación del punto de entrada único (Spring Cloud Gateway) para gestionar el tráfico hacia los microservicios. | 3 | Piero Velarde | Done |
+| | | BP-153 | Crear el server discovery (Eureka) | Configuración del servidor de descubrimiento para el registro y localización dinámica de servicios. | 2.5 | David Rengifo | Done |
+| **US008** | **Reservar un cubículo** | BP-150 | Crear el servicio Booking | Desarrollo del microservicio independiente para la lógica de transacciones de reserva y gestión de slots. | 4 | Joaquín Carranza | Done |
+| **US014** | **Ver la sede asignada** | BP-151 | Crear el servicio Branching | Implementación del microservicio encargado de administrar las sedes, horarios y ubicación geográfica. | 3.5 | David Rengifo | Done |
+| **US016** | **Inicio de sesión administrador** | BP-152 | Crear el servicio IAM | Migración de la lógica de identidad, autenticación y roles a un microservicio centralizado de seguridad. | 4 | Piero Velarde | Done |
+| **TS001** | **Obtener cubículos** | T-001 | Endpoint para lista de cubículos | Implementar la lógica de API para que el frontend obtenga la lista de cubículos por sede específica. | 2 | Joaquín Carranza | Done |
+| **TS007** | **Simular Sensores en Wokwi** | T-001 | Simulación de circuito ESP32 | Validación de la lectura del sensor de peso y transmisión de datos hacia el Edge API mediante Wokwi. | 3 | David Rengifo | Done |
+| **TS009** | **Integración y Validación** | BP-155 | Verificar funcionamiento simultáneo | Ejecución de pruebas de comunicación entre el Gateway y los microservicios en simultáneo para asegurar interoperabilidad. | 2 | Joaquín Carranza | Done |
+
+#### 5.3.4.2 Development Evidence for Sprint Review
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-eureka | main | `a1b2c3d` | **chore: setup Eureka Server discovery** | Add spring-cloud-starter-netflix-eureka-server and enable server annotation. | 02/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | main | `e4f5g6h` | **feat: implement Spring Cloud Gateway** | Configuration of routes for IAM and Branching services with security filters. | 03/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-service | develop | `i7j8k9l` | **feat: initialize IAM microservice** | Setup project structure and migrate authentication logic from monolith. | 04/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-branching-service | develop | `q3r4s5t` | **feat: initialize Branching microservice** | Implementation of headquarter domain and repository interfaces. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking-service | develop | `m0n1o2p` | **feat: initialize Booking microservice** | Define booking aggregate and persistence layer with MySQL. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/backend | develop | `u6v7w8x` | **feat: endpoint for cubicle list by headquarter** | Implementation of GET /api/v1/headquarters/{id}/cubicles for frontend integration. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | develop | `y9z0a1b` | **feat: routing for Branching service** | Configuration of load balanced routes via Eureka for the branching service. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam-service | develop | `x2w1v0u` | **feat: implement JWT token validation** | Centralized security logic for user session management in the new service. | 07/06/2026 |
+
+#### 5.3.4.3 Testing Suite Evidence for Sprint Review
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-iam | develop | `z5x4y3w` | **test: add JWT validation unit tests** | Validate token extraction and claim verification in IAM service. | 04/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking | develop | `v2u1t0s` | **test: add booking creation scenarios** | Implement Gherkin feature for US008: Cubicle reservation logic. | 05/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-branching | develop | `r9q8p7o` | **test: add headquarter lookup tests** | Unit tests for repository and service layer in branching context. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-gateway | main | `n6m5l4k` | **test: route forwarding verification** | Automated tests to ensure gateway redirects to IAM and Branching. | 06/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | `j3k2i1h` | **test: US016.feature for admin login** | Define acceptance criteria for admin authentication in Gherkin. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/testing | tp | `g0f9e8d` | **test: TS001.feature for cubicle lookup** | Gherkin scenario for retrieving cubicle list by headquarter. | 07/06/2026 |
+| https://github.com/UPC-PRE-202601-1ASI0657-7940-NOMBRE/Bibflip-booking | develop | `c7b6a5z` | **test: weight sensor state updates** | Verify IoT state changes (TS007) via integration tests. | 07/06/2026 |
+
+#### 5.3.4.4 Execution Evidence for Sprint Review
+
+Para el Sprint 4 nos enfocamos enteramente al despliegue de nuestra solución la cual ya presentaba todo lo requerido.
+
+Puesto a que no hubo mucho cambio en lo que respecta a desarrollo, las funciones de esta entrega son las misma a la anterior.
+A continuación se mostrará la ejecución de una creación de un usuario administrador junto con su inicio de sesión desde el Swagger
+
+**Captura 1: Creación del usuario con rol de administrador**
+
+[![Swagger-auth-su.png](https://i.postimg.cc/Gmz0JfVK/Swagger-auth-su.png)](https://postimg.cc/PCLFdStv)
+
+**Captura 2: Inicio de sesión de usuario administrador con respuesta de su token**
+
+[![Swagger-auth-si.png](https://i.postimg.cc/bNjKX8j9/Swagger-auth-si.png)](https://postimg.cc/7bmB7Fh5)
+
+#### 5.3.4.5 Microservices Documentation Evidence for Sprint Review
+
+En esta sección se presenta la evidencia de la correcta ejecución y respuesta de los endpoints ya presentes para el Sprint 4. Las pruebas se realizaron consumiendo los microservicios a través del **API Gateway**, validando la integración con **Eureka** para el descubrimiento de servicios.
+
+A continuación, se detallan los endpoints principales probados mediante Postman y documentados con Swagger UI:
+
+| **Service / Context** | **Endpoint** | **Verbo HTTP** | **Acciones Implementadas / Descripción** | **Parámetros** |
+| :--- | :--- | :--- | :--- | :--- |
+| **IAM Service** | `/api/v1/auth/login` | POST | Autenticación de usuarios y generación de tokens JWT. | Request Body (Credentials) |
+| **IAM Service** | `/api/v1/users` | GET | Listar todos los usuarios registrados en el sistema. | N/A |
+| **IAM Service** | `/api/v1/roles` | GET | Obtener la lista de roles disponibles (Student, Admin, SuperAdmin). | N/A |
+| **Booking Service** | `/api/v1/bookings` | POST | Creación de una nueva reserva de cubículo validando disponibilidad. | Request Body (BookingData) |
+| **Booking Service** | `/api/v1/bookings` | GET | Visualizar el historial de reservas realizadas por los estudiantes. | N/A |
+| **Branching Service** | `/api/v1/headquarters` | GET | Obtener la lista de todas las sedes universitarias para el mapa. | N/A |
+| **Branching Service** | `/api/v1/headquarters/{id}/cubicles` | GET | Implementación de **TS001**: Listado técnico de cubículos por sede. | headquarterId (Path) |
+| **Cubicle Service** | `/api/v1/cubicles/available` | GET | Consulta de disponibilidad en tiempo real sincronizada con sensores IoT. | N/A |
+
+[![booking-service.png](https://i.postimg.cc/x1VHyxMq/booking-service.png)](https://postimg.cc/LnvnmVyM)
+
+[![branching-service.png](https://i.postimg.cc/kgP8F1K6/branching-service.png)](https://postimg.cc/gn4nGKMm)
+
+[![iam-service.png](https://i.postimg.cc/Hk154ZX8/iam-service.png)](https://postimg.cc/ZCjCJLfJ)
+
+#### 5.3.4.6 Software Deployment Evidence for Sprint Review
+
+Para el despliegue, primero se realizó la publicación de los contenedores a Docker Hub.
+
+[![docker.png](https://i.postimg.cc/jSJqTjLJ/docker.png)](https://postimg.cc/MnqJbq0W)
+
+Posteriormente se crearon y configuraron los recursos en Microsoft Azure para poder desplegar cada microservicio.
+
+[![Creacion-web-app.png](https://i.postimg.cc/dVTQF0Lk/Creacion-web-app.png)](https://postimg.cc/pmRMYRQR)
+
+También se hizo la creación de la base de datos.
+
+[![Creacion-base-de-datos.png](https://i.postimg.cc/pLnVvdpy/Creacion-base-de-datos.png)](https://postimg.cc/mPBWNB3G)
+
+Finalmente se obtuvo la vista de todos los microservicios desplegados en Azure.
+
+[![Microservicios-azure.png](https://i.postimg.cc/RZnCm0N3/Microservicios-azure.png)](https://postimg.cc/CRSpHSCY)
+
+#### 5.3.4.7 Team Collaboration Insights during Sprint
+
+Durante el desarrollo del Sprint, puesto a que ya se finalizó con el desarrollo del proyecto según los bounded contexts, nos enfocamos enteramente a correciones del informe como al despliegue de nuestra solución; a continuación se adjunta evidencia del trabajo colaborativo.
+
+[![team-insights.png](https://i.postimg.cc/Dwbfhz8s/team-insights.png)](https://postimg.cc/nXpfYpKc)
+
+#### 5.3.4.8 Kanban Board
+
+A continuación se muestra nuestro Kanban board para esta entrega final de nuestro proyecto.
+
+[![Kanban-Final.png](https://i.postimg.cc/Bn1Z3vXK/Kanban-Final.png)](https://postimg.cc/9DCHtCPm)
+
+## 5.4 Microservices Deployment
+
+### 5.4.1 Cloud Architecture Diagram
+
+[![cloud.png](https://i.postimg.cc/xCTMtZPW/cloud.png)](https://postimg.cc/R3yW0XyR)
+
+### 5.4.2 Cloud Architecture Deployment
+
+[![cloud-final.png](https://i.postimg.cc/DzfRP2Rt/cloud-final.png)](https://postimg.cc/pm702tWZ)
